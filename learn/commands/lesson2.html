@@ -13,15 +13,10 @@
     
 <!-- each div represents a module for the entire lesson-->
 <div>
-    chmod
-    ls -l
-    rm -i
-    wildcards *
-    
     
     <h2>Lesson 2</h2>
     
-    <p><strong>start this lesson with the contents of the directory (/dotQuiet/lesson2) listed. ls result: letters 'song lyrics' books</strong></p>
+    <p><strong>start this lesson with the contents of the directory (/dotQuiet/lesson2) listed. ls result: books letters 'song lyrics'</strong></p>
     
     
     <h3>touch</h3>
@@ -32,7 +27,7 @@
     
     <p>
         Terminal Result (displayed after typing correct answer, will automatically "use ls"):
-        letters 'song lyrics' books (name of the file created by "touch")
+        books letters 'song lyrics' (name of the file created by "touch")
         
     </p>
     
@@ -49,7 +44,7 @@
     
     <p>
         Terminal Result (displayed after typing correct answer, will automatically "use ls"):
-        letters 'song lyrics' books
+        books letters 'song lyrics'
     </p>
     
     <p>
@@ -81,7 +76,7 @@
     
     <p>
         Terminal Result of changing directories (displayed after typing correct answer, will automatically "use ls"):
-        letters 'song lyrics' books 'The Shining.pdf'
+        books letters 'song lyrics' 'The Shining.pdf'
     </p>
     
     <h3>mv pt. 2</h3>
@@ -93,7 +88,7 @@
     
     <p>
         Terminal Result of changing directories (displayed after typing correct answer, will automatically "use ls"):
-        'Recommendation Letter.txt' 'Mother\'s Day.txt'<br>
+        'Mother\'s Day.txt' 'Recommendation Letter.txt'<br>
         
         Terminal Result of renaming (displayed after typing correct answer, will automatically "use ls"):
         'Final Recommendation Letter.txt' 'Mother\'s Day.txt'<br>
@@ -102,15 +97,63 @@
     <h3>chmod</h3>
     
     <p>
-        
+        Directories and files can have their permissions changed through the Linux terminal.  This is useful for collaborative computing environments where one has to restrict or allow access to certain files.  Move to the directory 'song lyrics' (one above where you are now) and try typing "ls -l" into the terminal, the permissions should appear to the left of each item in the current directory. (Tip: the "-l" next to "ls" is called an option, in this case "long", that alters the output of commands).
     </p>
-    
     
     <p>
+        commands required:
+        cd ../'song lyrics' or cd .. \ cd 'song lyrics'
+        ls -l
         
+        Terminal
+        drwxr-xr-x dotQuiet dotQuiet (size) (timestamp) pop
+        drwxr-xr-x dotQuiet dotQuiet (size) (timestamp) rock
+        -r-xr-xr-x dotQuiet dotQuiet (size) (timestamp) 'Amazing Grace.txt'
+    </p>
+    
+    <h3>chmod cont.</h3>
+    
+    <p>
+        The 10 character string that begins each line resulting from "ls -l" shows us the permissions of each file or directory.  The "d" or "-" at the beginning indicates a directory or file respectively and each grouping of three letters shows us 1: the owner, 2: group, and 3: global access of reading (r), writing (w) or executing (x), where a letter indicates permission and a dash (-) indicates no permission.  We use "chmod" (change mode) with a 3 digit number to update permissions where the digits indicate the permissions of the owner, group, and all other users (global).<br>
+        
+        Type chmod 'Amazing Grace.txt' 755 then view the new permissions with ls -l.
+    </p>
+    
+    <p>
+        commands required: <br>
+        chmod 'Amazing Grace.txt' <br>
+        ls -l <br>
+        
+        Terminal:
+        drwxr-xr-x dotQuiet dotQuiet (size) (timestamp) pop
+        drwxr-xr-x dotQuiet dotQuiet (size) (timestamp) rock
+        -rwxr-xr-x dotQuiet dotQuiet (size) (timestamp) 'Amazing Grace.txt'
+        
+        Additional comments:
+        The "w" is now present for owners of 'Amazing Grace.txt', you could change the lyrics using a text editor if you wanted to.
     </p>
     
     
+   <h3>wildcards (*)</h3>
+    
+    <p>
+        The Linux terminal can do some powerful things with very few characters.  One good example of this fact are wildcards, operators added to commands that select all files that fulfill certain requirements.  The wildcard we will look at is "*", which when followed or preceded by a string of characters, selects files that end or start with that string.  Change to the "rock" directory and remove all lyric files by "The Beatles".  (Hint: every lyric file you need to remove starts with "The Beatles").
+    </p>
+    
+    <p>
+        commands required:
+        cd rock<br>
+        ls (or ls -l)<br>
+        (contents: 'The Beatles - I Am The Walrus.txt' 'The Beatles - Hey Jude.txt' 'The Beatles - Strawberry Fields Forever.txt' 'The Doors - Light My Fire.txt' 'The Doors - The End.txt')<br>
+        
+        rm "The Beatles"* 
+        
+        
+        Terminal:
+        (display contents once all files are removed)<br>
+        'The Doors - Light My Fire.txt' 'The Doors - The End.txt'
+    </p>
+      
 </div>
 
 </body>

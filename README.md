@@ -16,7 +16,7 @@ touch
 rm
 mv
 chmod
-(conditionals on earlier commands [ex: ls -l, rm -i, wildcards])
+(conditionals on earlier commands [ex: ls -l, wildcards (*)])
 
 level 3:
 locate
