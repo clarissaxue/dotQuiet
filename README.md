@@ -20,9 +20,8 @@ chmod
 
 level 3:
 locate
-grep
-scp
 ssh
+(scp?)
 
 
 Paragraphs that say "Additional Comments" can be inserted in a text field that gives the user feedback on their responses (telling them when they are correct or incorrect)
