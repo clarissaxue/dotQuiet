@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>CSS Grid Practice</title>
+  </head>
+  <body>
+    <div id="title"> 
+      Learn Linux
+    </div>
 
-<head>
-  <meta charset="utf-8">
-  <title>Home</title>
-  <meta name="author" content="dotQuiet">
-  
-  <link href="../../assets/css/style.css" rel="stylesheet">
-</head>
+<div id="wrapper">
+  <div id="nav">
+        <ul>
+            <li class="navBorder"><a href="index.html">Home</a></li>
+            <li class="navBorder"><a href="#">Learn</a>
+              <ul> 
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Commands</a></li>
+                <li><a href="#">Quiz</a></li>
+              </ul>
+            </li>
+          <li class="navBorder"><a href="#">History</a></li>
+          <li class="navBorder"><a href="#">Sources</a></li>
+        </ul>
+  </div>
 
-<body>
 
-<div>
-    
-    <h2>Overview</h2>
-    <p>
-        Linux is an Operating System (OS) that was created in the 1990s under the vision that computing should be open-source and accessible to everyone.  Its influence is far reaching, powering the software of phones, appliances, and supercomputers alike.
-    </p>
-    
-    <p>
-        Unlike other operating systems that require purchase and restrict the user from customizing their experience, Linux is free to use, but requires a fair amount of computing knowledge to use effectively.  The Linux terminal, or shell, is the starting point for interacting with Linux and can intimidate new users with its text-only interface, luckily, this site offers a smooth introduction.
-    </p>
-    
-    <h2>Site Purpose</h2>
-    <p>
-        This site will instruct users on how to use the Linux shell to manipulate files and file structure for their own purposes.  The skills you acquire here can also be extended beyond Linux into other computing environments that use shell commands.  Additionally, the site will provide information on Linux's history and an overview of popular, present-day distributions.
-    </p>
-    
-    <!--Links to introduction on file structure-->
-    <a href="learn/introduction/intro.html">Start Learning >></a>
-    
+
+  <div id="logo">
+    Logo
+    <div class="verticalWrapper">
+      <nav class="vertical">
+        <ul>
+          <li>
+            <label for="intro">Introduction</label>
+            <input type="radio" id="intro" />
+          </li>
+          <li>
+            <label for="commands">Commands</label>
+            <input type="radio" id="commands" />
+          </li>
+          <li>
+            <label for="quizzes">Quizzes</label>
+            <input type="radio" id="quizzes" />
+            <div>
+              <ul>
+                <li><a href="#">Quiz #1</a></li>
+                <li><a href="#">Quiz #2</a></li>
+                <li><a href="#">Quiz #3</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div id="body">Body</div>
+
+  <div id="footer">
+      <p>&#x24B8;Copyright 2019 Group dotQuiet</p>
+  </div>
 </div>
 
-</body>
+  </body>
+</html>
