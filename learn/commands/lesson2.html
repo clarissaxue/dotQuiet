@@ -11,20 +11,13 @@
 
 <body>
 <div id="wrapper">
-  <div id="nav">
-        <ul>
-            <li class="navBorder"><a href="../../index.html">Home</a></li>
-            <li class="navBorder"><a href="../">Learn</a>
-              <ul> 
-                <li><a href="../introduction/intro.html">Introduction</a></li>
-                <li><a href="../commands/">Commands</a></li>
-                <li><a href="../quiz/final_quiz.html">Quiz</a></li>
-              </ul>
-            </li>
-          <li class="navBorder"><a href="../../history/history.html">History</a></li>
-          <li class="navBorder"><a href="../../sources/sources.html">Sources</a></li>
-        </ul>
-    </div>
+    <?php
+
+        $path = "../../";
+        include $path."assets/php/top_nav.php";
+
+    ?>
+
 
   <div id="logo">
     Logo
