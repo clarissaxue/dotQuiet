@@ -10,6 +10,39 @@
       Learn Linux
     </div>
 
+
+<!-- Login Form -->
+<button class="open-button" onclick="openForm(this)" id="login">Login</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login Your Information</h1>
+
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="login" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+  </form>
+</div>
+
+<script>
+function openForm() 
+{
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() 
+{
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+<!-- // Login Form -->
+
+
 <div id="wrapper">
   <div id="nav">
         <ul>
