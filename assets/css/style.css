@@ -74,7 +74,7 @@ h2{
     right: 175px;
     width: 70px;
     border:1px solid white;
-    background-color:white;
+    background-color:#fcfcfc;
     font-family:"Trebuchet MS", Calibri, sans-serif;
     font-size:13px;
     text-transform: uppercase;
@@ -173,7 +173,7 @@ h2{
 #logo {
     grid-area: logo;
     text-align: center;
-    background-color: white;
+    background-color: #fcfcfc;
     border-radius: 5px;
     box-shadow:1px 4px 10px -4px rgba(0,0,0,.1);
 }
@@ -181,7 +181,7 @@ h2{
 #body {
     grid-area: body;
     padding: 15px;
-    background-color: white;
+    background-color: #fcfcfc;
     margin: 0px 0px 0px 35px;
     border-radius: 5px;
     box-shadow:1px 4px 10px -4px rgba(0,0,0,.1);
@@ -347,6 +347,7 @@ h2{
     line-height: 50px;
     margin-top: 50px;
     border: 2px solid #7B9EBE;
+
 }
 
 /* direct descendatnts of vertical/ul/li with form label:hover become "clickable" */
