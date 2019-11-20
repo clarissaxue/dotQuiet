@@ -2,6 +2,9 @@
 *{
     margin:0;
     padding:0;
+
+    /* For Login Form */
+    box-sizing: border-box;
 }
 
 #nav{
@@ -60,9 +63,6 @@ body {
     border-width: 0px 0px 3px 0px;
     padding: 15px;
 }
-
-
-
 
 
 
@@ -151,10 +151,9 @@ body {
 
 
 
-
 /* all styles for vertical navigation */
 .verticalWrapper {
-  margin-top: 150px;
+  margin-top: 75px;
   margin-left: auto;
   margin-right: auto;
   width: 250px;
@@ -170,7 +169,7 @@ body {
 .vertical > ul {
     list-style: none;
     background-color: blue;
-    padding: 2px 20px 50px 20px; 
+    padding: 2px 20px 35px 20px; 
 }
 
 /* direct descendant of vertical/ul/ with form li becomes verticle (block) */
@@ -180,18 +179,30 @@ body {
 
 /* direct descendant of vertical/ul/li/ with form label form a becomes blue*/
 .vertical ul li label {
-    background-color:  #7B9EBE;
+    background-color: #7B9EBE;
     border-radius: 4px;
     color: white;
     display: block;
     height: 50px;
     line-height: 50px;
-    margin-top: 50px;
+    margin-top: 30px;
     border: 2px solid black;
 }
 
-/* direct descendatnts of vertical/ul/li with form label:hover become "clickable" */
-.vertical ul li label:hover {
+.vertical ul li label a{
+    text-decoration: none;
+    color: white;
+}
+
+/* introduction div becomes clickable */
+.vertical ul li label#intro:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #7B9EBE;
+}
+
+/* introduction div becomes clickable */
+.vertical ul li label:hover a{
     cursor: pointer;
     background-color: white;
     color: #7B9EBE;
@@ -206,7 +217,10 @@ body {
 .vertical ul li div {
     max-height: 0;
     overflow: hidden;
-
+    max-height: 130px;
+    max-width: 175px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* direct descendants of vertical/ul/li with form input that are clicked show div with same descendants*/
@@ -238,6 +252,96 @@ body {
     padding: 10px 0 10px 35px;
 }
 /* end vertical navigation styling */
+
+
+
+
+
+/* Login CSS Form */
+/* Button used to open the contact form*/
+.open-button 
+{
+    background-color: #6FB091;
+    color: white;
+    padding: 16px 20px;
+    cursor: pointer;
+    opacity: 0.8;
+    position: absolute;
+    top: 23px;
+    right: 28px;
+    width: 100px;
+    border-radius: 7px;
+    border: 2px solid #000000;
+}
+
+/* The popup form - hidden by default */
+.form-popup 
+{
+    display: none;
+    position: absolute;
+    top: 23px;
+    right: 28px;
+    border: 3px solid #f1f1f1;
+    z-index: 99;
+}
+
+/* Add styles to the form container */
+.form-container 
+{
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] 
+{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus 
+{
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the login button */
+.form-container .btn 
+{
+    background-color: #6FB091;
+    border-radius: 7px;
+    border: 2px solid #000000;
+    color: white;
+    padding: 16px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel 
+{
+    background-color: red;
+    border-radius: 7px;
+    border: 2px solid #000000;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover 
+{
+    opacity: 1;
+}
+/* //Login CSS Form */
+
+
+
+
 
 
 
