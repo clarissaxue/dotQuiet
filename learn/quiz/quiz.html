@@ -1,63 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Quiz</title>
-		<link rel="shortcut icon" href="dotQuietfav.png" />
-		<link rel="stylesheet" href="../../assets/css/style2.css"/>
-	</head>
-
-	<body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+    <title>Learn Linux : Quiz</title>
+  </head>
+  <body>
 		<div class="header">
-			<div class="logo">
-				<img src="dotQuietlogo.png" width="230"alt="logo">
-			</div>
-
-			<div class="navbar">
-				<a href="home">home</a>
-				<a href="home">learn</a>
-				<a href="home">history</a>
-				<a href="home">sources</a>
-			</div>
-		</div>
-
-
-		<div class="quiz">
-			<form action="" method="get" class="form">
-			    <h1>Quiz</h1>
-			        <p>this is question one</p>
-			        <textarea name="ta">please type your answer here.</textarea>
-			    
-			     	<br>
-			        <p>Select/option menu</p>
-			        <select name="selection">
-			        	<option value="">--Please choose one-- ▼</option>
-			        	<option value="opt1"> Option 1 </option>
-			        	<option value="opt2"> Option 2 </option>
-			        </select>
-
-			    	<br>
-			    	<p>Multiple Choice</p>
-			    		<label for="choice1"><input type="radio" id="choice1" name="mc"/> Choice 1</label>
-			    		<label for="choice2"><input type="radio" id="choice2" name="mc"/> Choice 2</label>
-			    		<label for="choice3"><input type="radio" id="choice3" name="mc"/> Choice 3</label>
-			    		<label for="choice4"><input type="radio" id="choice4" name="mc"/> Choice 4</label>
-				    	
-			  		<br>
-			  		<p>Checkboxes for Multiple Options</p>
-			  			<label for="check1"><input type="checkbox" id="check1" name="check1"/> Checkbox 1</label>
-			  			<label for="check2"><input type="checkbox" id="check2" name="check2"/> Checkbox 2</label>
-			  			<label for="check3"><input type="checkbox" id="check3" name="check3"/> Checkbox 3</label>
-			  			<label for="check4"><input type="checkbox" id="check4" name="check4"/> Checkbox 4</label>
-			  			<label for="check5"><input type="checkbox" id="check5" name="check5"/> Checkbox 5</label>
-			    	
-					
-			  		<br><input type="submit" class="button" value="Send"/>
-
-			        
-			    
+				<div class="logo">
+					<img src="../../dotQuietlogo.png" width="230"alt="logo">
+				</div>
+	
+				<div class="navbar">
+					<a href="home">home</a>
+					<a href="home">learn</a>
+					<a href="home">history</a>
+					<a href="home">sources</a>
+		  </div>
+		  
+		  <!-- Login Form -->
+		  <button class="open-button" onclick="openForm(this)" id="login">Login</button>
+	
+		  <div class="form-popup" id="myForm">
+			<form action="/action_page.php" class="form-container">
+			  <h1>Login Your Information</h1>
+	
+			  <label for="username"><b>Username</b></label>
+			  <input type="text" placeholder="Enter Username" name="username" required>
+	
+			  <label for="psw"><b>Password</b></label>
+			  <input type="password" placeholder="Enter Password" name="psw" required>
+	
+			  <button type="login" class="btn">Login</button>
+			  <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
 			</form>
+		  </div>
+	
+		  <!-- Register Form -->
+		  <button class="register-button" onclick="openForm(this)" id="login">Register</button>
+	
+		  <div class="form-popup" id="myForm">
+			<form action="/action_page.php" class="form-container">
+			  <h1>Login Your Information</h1>
+	
+			  <label for="username"><b>Username</b></label>
+			  <input type="text" placeholder="Enter Username" name="username" required>
+	
+			  <label for="psw"><b>Password</b></label>
+			  <input type="password" placeholder="Enter Password" name="psw" required>
+	
+			  <button type="login" class="btn">Login</button>
+			  <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+			</form>
+		  </div>
+			</div>
+	
+	
+	
+	
+	<script>
+	function openForm() 
+	{
+	  document.getElementById("myForm").style.display = "block";
+	}
+	
+	function closeForm() 
+	{
+	  document.getElementById("myForm").style.display = "none";
+	}
+	</script>
+	<!-- // Login Form -->
+	
+	
+	<div id="wrapper">
+	
+	
+	  <div id="logo">
+		<div class="verticalWrapper">
+		  <nav class="vertical">
+			<ul>
+			  <li>
+				<label for="intro">Introduction</label>
+				<input type="radio" id="intro" />
+			  </li>
+			  <li>
+				<label for="commands">Commands</label>
+				<input type="radio" id="commands" />
+			  </li>
+			  <li>
+				<label for="quizzes">Quizzes</label>
+				<input type="radio" id="quizzes" />
+				<div>
+				  <ul>
+					<li><a href="#">Quiz #1</a></li>
+					<li><a href="#">Quiz #2</a></li>
+					<li><a href="#">Quiz #3</a></li>
+				  </ul>
+				</div>
+			  </li>
+			</ul>
+		  </nav>
 		</div>
-	</body>
+	  </div>
+	
+	  <div id="body">
+			<form action="" method="get" class="form">
+				<h2>Quiz</h2>
+					<p>this is question one</p>
+					<textarea name="ta">please type your answer here.</textarea>
+				
+						<br>
+					<p>Select/option menu</p>
+					<select name="selection">
+						<option value="">--Please choose one-- ▼</option>
+						<option value="opt1"> Option 1 </option>
+						<option value="opt2"> Option 2 </option>
+					</select>
 
-</html>
+					<br>
+					<p>Multiple Choice</p>
+						<label for="choice1"><input type="radio" id="choice1" name="mc"/> Choice 1</label>
+						<label for="choice2"><input type="radio" id="choice2" name="mc"/> Choice 2</label>
+						<label for="choice3"><input type="radio" id="choice3" name="mc"/> Choice 3</label>
+						<label for="choice4"><input type="radio" id="choice4" name="mc"/> Choice 4</label>
+						
+						<br>
+						<p>Checkboxes for Multiple Options</p>
+							<label for="check1"><input type="checkbox" id="check1" name="check1"/> Checkbox 1</label>
+							<label for="check2"><input type="checkbox" id="check2" name="check2"/> Checkbox 2</label>
+							<label for="check3"><input type="checkbox" id="check3" name="check3"/> Checkbox 3</label>
+							<label for="check4"><input type="checkbox" id="check4" name="check4"/> Checkbox 4</label>
+							<label for="check5"><input type="checkbox" id="check5" name="check5"/> Checkbox 5</label>
+					
+					
+						<br><input type="submit" class="button" value="Send"/>
+
+					
+				
+			</form>
+		
+		
+		</div>
+	
+	  <div id="footer">
+		  <p>&#x24B8;Copyright 2019 Group dotQuiet</p>
+	  </div>
+	</div>
+	
+	  </body>
+	</html>

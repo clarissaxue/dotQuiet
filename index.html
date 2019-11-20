@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Temporary Outline</title>
+    <title>Learn Linux</title>
   </head>
   <body>
     <div class="header">
@@ -19,7 +19,7 @@
       </div>
       
       <!-- Login Form -->
-      <button class="open-button" onclick="openForm(this)" id="login">Login</button>
+      <button class="open-button" onclick="openForm()" id="login">Login</button>
 
       <div class="form-popup" id="myForm">
         <form action="/action_page.php" class="form-container">
@@ -37,42 +37,26 @@
       </div>
 
       <!-- Register Form -->
-      <button class="register-button" onclick="openForm(this)" id="login">Register</button>
-
+      <button class="register-button" onclick="openForm()" id="login">Register</button>
       <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
-          <h1>Login Your Information</h1>
-
-          <label for="username"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="username" required>
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-
-          <button type="login" class="btn">Login</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-        </form>
+          <form action="/action_page.php" class="form-container">
+            <h1>Login Your Information</h1>
+  
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+  
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+  
+            <button type="login" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+          </form>
+        </div>
       </div>
-		</div>
 
-
-
-
-<script>
-function openForm() 
-{
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() 
-{
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
 <!-- // Login Form -->
-
-
 <div id="wrapper">
+<<<<<<< HEAD
 <<<<<<< HEAD
   
 <?php
@@ -100,6 +84,8 @@ function closeForm()
 
 ?>
 
+=======
+>>>>>>> 16d5a04973aa5c2aa3f279a7699a616eecaad28f
   <div id="logo">
     <div class="verticalWrapper">
       <nav class="vertical">
@@ -157,7 +143,8 @@ function closeForm()
   <div id="footer">
       <p>&#x24B8;Copyright 2019 Group dotQuiet</p>
   </div>
-</div>
+  </div>
 
+  <script src="assets/js/login.js"></script>
   </body>
 </html>
