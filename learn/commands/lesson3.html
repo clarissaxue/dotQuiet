@@ -10,96 +10,155 @@
 </head>
 
 <body>
-<div id="wrapper">
-    <?php
-
-        $path = "../../";
-        include $path."assets/php/top_nav.php";
-
-    ?>
-
-  <div id="logo">
-    Logo
-    <div class="verticalWrapper">
-      <nav class="vertical">
-        <ul>
-          <li>
-            <label for="intro">Introduction</label>
-            <input type="radio" id="intro" />
-          </li>
-          <li>
-            <label for="commands">Commands</label>
-            <input type="radio" id="commands" />
-          </li>
-          <li>
-            <label for="quizzes">Quizzes</label>
-            <input type="radio" id="quizzes" />
-            <div>
-              <ul>
-                <li><a href="#">Quiz #1</a></li>
-                <li><a href="#">Quiz #2</a></li>
-                <li><a href="#">Quiz #3</a></li>
-              </ul>
+        <div class="header">
+                <div class="logo">
+                    <img src="../../dotQuietlogo.png" width="230"alt="logo">
+                </div>
+    
+                <div class="navbar">
+                    <a href="home">home</a>
+                    <a href="home">learn</a>
+                    <a href="home">history</a>
+                    <a href="home">sources</a>
+          </div>
+          
+          <!-- Login Form -->
+          <button class="open-button" onclick="openForm(this)" id="login">Login</button>
+    
+          <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+              <h1>Login Your Information</h1>
+    
+              <label for="username"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" required>
+    
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+    
+              <button type="login" class="btn">Login</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+          </div>
+    
+          <!-- Register Form -->
+          <button class="register-button" onclick="openForm(this)" id="login">Register</button>
+    
+          <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+              <h1>Login Your Information</h1>
+    
+              <label for="username"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" required>
+    
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+    
+              <button type="login" class="btn">Login</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+            </form>
+          </div>
             </div>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-
-
-<!-- each div represents a module for the entire lesson-->
-<div id="body">
-    level 3:
-    locate
-    ssh
-    (more to be decided on)
     
-    <h3>locate</h3>
     
-    <p>
-        The examples provided up to this point have used relatively uncrowded file systems, in reality, your operating system will become crowded very quickly with programs, media, and other files.  One rememdy to this problem is the "locate" command, which displays all files that satisfy your criteria and their locations.  Use "locate" and your knowledge of wildcards to display all files that end in '.txt'.
-    </p>
     
-    <p>
-        (Will display directory contents on entry to page)<br>
-        contents: TBD
+    
+    <script>
+    function openForm() 
+    {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() 
+    {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+    <!-- // Login Form -->
+    
+    
+    <div id="wrapper">
+      <div id="logo">
+        <div class="verticalWrapper">
+          <nav class="vertical">
+            <ul>
+              <li>
+                <label for="intro">Introduction</label>
+                <input type="radio" id="intro" />
+              </li>
+              <li>
+                <label for="commands">Commands</label>
+                <input type="radio" id="commands" />
+              </li>
+              <li>
+                <label for="quizzes">Quizzes</label>
+                <input type="radio" id="quizzes" />
+                <div>
+                  <ul>
+                    <li><a href="#">Quiz #1</a></li>
+                    <li><a href="#">Quiz #2</a></li>
+                    <li><a href="#">Quiz #3</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    
+      <div id="body">
         
-        
-        commands required: <br>
-        locate "*.txt" <br>
-        
-        Terminal:
-        (displays all textfiles in system)
-        
-        Additional comments:
-        Adding the option "-n" followed by a number to your "locate" call will display until your number is reached. 
-    </p>
-    
-    
-   <h3>ssh</h3>
-    
-    <p>
-        Collaborative system are an essental part of nearly all computing environments today.  Servers can be accessed through the "ssh" (Secure Shell) command, allowing users to interact with files on another system (in this case, a server).  Access our server with the command "ssh dotQuiet.org" and find the location of the file "lesson3.txt".
-    </p>
-    
-    <p>
-        commands required:
-        ssh dotQuiet.org<br>
-        
-        Additional comment (displays on the text field apart from the terminal):<br>
-        The text before the cursor now displays what server you're connected to, in this case, dotQuiet.org.
-        
-        locate "lesson3.txt"<br>
-    </p>
-    
-    <br>
+        <!-- each div represents a module for the entire lesson-->
     <div>
-    <h3>You Can try out abouve listed commands here: </h3>
-        <iframe src="https://bellard.org/jslinux/vm.html?url=https://bellard.org/jslinux/buildroot-x86.cfg" width="800" height="650"></iframe>
+        <h2>Lesson 3</h2>
+        level 3:
+        locate
+        ssh
+        (more to be decided on)
+        
+        <h3>locate</h3>
+        
+        <p>
+            The examples provided up to this point have used relatively uncrowded file systems, in reality, your operating system will become crowded very quickly with programs, media, and other files.  One rememdy to this problem is the "locate" command, which displays all files that satisfy your criteria and their locations.  Use "locate" and your knowledge of wildcards to display all files that end in '.txt'.
+        </p>
+        
+        <p>
+            (Will display directory contents on entry to page)<br>
+            contents: TBD
+            
+            
+            commands required: <br>
+            locate "*.txt" <br>
+            
+            Terminal:
+            (displays all textfiles in system)
+            
+            Additional comments:
+            Adding the option "-n" followed by a number to your "locate" call will display until your number is reached. 
+        </p>
+        
+        
+       <h3>ssh</h3>
+        
+        <p>
+            Collaborative system are an essental part of nearly all computing environments today.  Servers can be accessed through the "ssh" (Secure Shell) command, allowing users to interact with files on another system (in this case, a server).  Access our server with the command "ssh dotQuiet.org" and find the location of the file "lesson3.txt".
+        </p>
+        
+        <p>
+            commands required:
+            ssh dotQuiet.org<br>
+            
+            Additional comment (displays on the text field apart from the terminal):<br>
+            The text before the cursor now displays what server you're connected to, in this case, dotQuiet.org.
+            
+            locate "lesson3.txt"<br>
+        </p>
+        
+        </div>
+    
+      <div id="footer">
+          <p>&#x24B8;Copyright 2019 Group dotQuiet</p>
+      </div>
     </div>
     
-</div>
-    </div>
-
-</body>
+      </body>
+    </html>

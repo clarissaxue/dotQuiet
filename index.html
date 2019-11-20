@@ -3,57 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Temporary Outline</title>
+    <title>Learn Linux</title>
   </head>
   <body>
-    <div id="title"> 
-      Learn Linux
-    </div>
+    <div class="header">
+			<div class="logo">
+				<img src="dotQuietlogo.png" width="230"alt="logo">
+			</div>
 
+			<div class="navbar">
+				<a href="home">home</a>
+				<a href="home">learn</a>
+				<a href="home">history</a>
+				<a href="home">sources</a>
+      </div>
+      
+      <!-- Login Form -->
+      <button class="open-button" onclick="openForm()" id="login">Login</button>
 
-<!-- Login Form -->
-<button class="open-button" onclick="openForm(this)" id="login">Login</button>
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Login Your Information</h1>
 
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Login Your Information</h1>
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" required>
 
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="login" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+        </form>
+      </div>
 
-    <button type="login" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-  </form>
-</div>
-
-<script>
-function openForm() 
-{
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() 
-{
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
-<!-- // Login Form -->
-
-
-<div id="wrapper">
+      <!-- Register Form -->
+      <button class="register-button" onclick="openForm()" id="login">Register</button>
+      <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <h1>Login Your Information</h1>
   
-<?php
-    
-    $path = "./";
-    include $path."assets/php/top_nav.php";
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+  
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+  
+            <button type="login" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+          </form>
+        </div>
+      </div>
 
-?>
-
+<!-- // Login Form -->
+<div id="wrapper">
   <div id="logo">
-    Logo
     <div class="verticalWrapper">
       <nav class="vertical">
         <ul>
@@ -110,7 +113,8 @@ function closeForm()
   <div id="footer">
       <p>&#x24B8;Copyright 2019 Group dotQuiet</p>
   </div>
-</div>
+  </div>
 
+  <script src="assets/js/login.js"></script>
   </body>
 </html>

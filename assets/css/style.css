@@ -7,26 +7,188 @@
     box-sizing: border-box;
 }
 
+body {
+    background:rgb(226, 204, 146, 0.25);
+	font-family:"Trebuchet MS", Calibri, sans-serif;
+	font-size:15px;
+	line-height: 1.5em;
+	margin: -10px;
+	margin-bottom: 20px;
+    overflow-x: hidden;
+    color:#444;
+}
+
+a {
+    color: #222222;
+    border-bottom: 1px solid #fcfcfc;
+    text-decoration: none;
+    padding:1px 5px 2px 5px;
+}
+
+a:hover {
+   border-bottom: 2px solid #7b9ebe;
+   color:#888888;
+   transition: all 0.3s ease-out;
+}
+
+h2{
+    color:rgb(226, 204, 146);
+    line-height: 2em;
+    font-size:25px;
+}
+
+.header{
+	position: fixed;
+	background: #fcfcfc;
+	width:105%;
+	margin-top: -140px;
+	box-shadow:0 4px 10px -4px rgba(0,0,0,.1);
+}
+
+.logo{
+	width:350px;
+	margin-top: -25px;
+	margin-left: 70px;
+}
+
+.navbar{
+	float:right;
+	margin-right:250px;
+	margin-top: -70px;
+	letter-spacing: 1.2px;
+	font-size:16px;
+	text-transform: uppercase;
+	word-spacing: 20px;
+	font-weight: 500;
+}
+
+
+/* Login CSS Form */
+/* Button used to open the contact form*/
+.open-button 
+{
+    color: #7b9ebe;
+    padding: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 47px;
+    right: 175px;
+    width: 70px;
+    border:1px solid #fcfcfc;
+    background-color:#fcfcfc;
+    font-family:"Trebuchet MS", Calibri, sans-serif;
+    font-size:13px;
+    text-transform: uppercase;
+}
+
+.register-button 
+{
+    background-color: #7b9ebe;
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 46px;
+    right: 90px;
+    width: 90px;
+    border-radius: 7px;
+    border: 2px solid#7b9ebe;
+    font-family:"Trebuchet MS", Calibri, sans-serif;
+    font-size:13px;
+    text-transform: uppercase;
+}
+
+/* The popup form - hidden by default */
+.form-popup 
+{
+    display: none;
+    position: absolute;
+    top: 23px;
+    right: 28px;
+    border: 3px solid #f1f1f1;
+    z-index: 99;
+}
+
+/* Add styles to the form container */
+.form-container 
+{
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] 
+{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus 
+{
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the login button */
+.form-container .btn 
+{
+    background-color: #6FB091;
+    border-radius: 7px;
+    border: 2px solid #000000;
+    color: white;
+    padding: 16px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel 
+{
+    background-color: red;
+    border-radius: 7px;
+    border: 2px solid #000000;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover 
+{
+    opacity: 1;
+}
+/* //Login CSS Form */
+
+
+
 #nav{
     grid-area: nav;
     background-color: blue;
-    text-align: center;
-    padding: 30px;
-    margin: 0px 0px 35px 35px;
+    text-align: center; 
 }
 
 #logo {
     grid-area: logo;
+    width:250px;
     text-align: center;
-    background-color: #6FB091;
+    background-color: #fcfcfc;
+    border-radius: 5px;
+    box-shadow:1px 4px 10px -4px rgba(0,0,0,.1);
 }
 
 #body {
     grid-area: body;
-    text-align: center;
-    padding: 175px 0px 350px 0px;
-    background-color: #9689B9;
+    padding: 15px;
+    background-color: #fcfcfc;
     margin: 0px 0px 0px 35px;
+    border-radius: 5px;
+    box-shadow:1px 4px 10px -4px rgba(0,0,0,.1);
+    width:100%;
+    float:left;
 }
 
 #footer {
@@ -41,16 +203,14 @@
         display: grid;
         grid-template-columns: auto auto auto;
         grid-template-areas:
-        "logo  nav   nav   nav"
+        "logo  body  body  body"
         "logo  body  body  body"
         "logo  body  body  body"
         "footer footer footer footer";
-        margin: 50px 125px 0px 125px;
+        margin: 150px 125px 30px 125px;
 }
 
-body {
-    background-color: #E2CC92;
-}
+
 
 /* styles title of website */
 #title{
@@ -63,6 +223,9 @@ body {
     border-width: 0px 0px 3px 0px;
     padding: 15px;
 }
+
+
+
 
 
 
@@ -151,9 +314,10 @@ body {
 
 
 
+
 /* all styles for vertical navigation */
 .verticalWrapper {
-  margin-top: 75px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 250px;
@@ -162,14 +326,14 @@ body {
 
 .vertical {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 20px;
 }
 
 .vertical > ul {
     list-style: none;
-    background-color: blue;
-    padding: 2px 20px 35px 20px; 
+    padding: 2px 20px 50px 20px; 
 }
 
 /* direct descendant of vertical/ul/ with form li becomes verticle (block) */
@@ -179,33 +343,23 @@ body {
 
 /* direct descendant of vertical/ul/li/ with form label form a becomes blue*/
 .vertical ul li label {
-    background-color: #7B9EBE;
+    background-color:  #7B9EBE;
     border-radius: 4px;
     color: white;
     display: block;
     height: 50px;
     line-height: 50px;
-    margin-top: 30px;
-    border: 2px solid black;
+    margin-top: 50px;
+    border: 2px solid #7B9EBE;
+
 }
 
-.vertical ul li label a{
-    text-decoration: none;
-    color: white;
-}
-
-/* introduction div becomes clickable */
-.vertical ul li label#intro:hover {
+/* direct descendatnts of vertical/ul/li with form label:hover become "clickable" */
+.vertical ul li label:hover {
     cursor: pointer;
-    background-color: white;
+    background-color: rgb(123, 158, 190, 0.1);
     color: #7B9EBE;
-}
-
-/* introduction div becomes clickable */
-.vertical ul li label:hover a{
-    cursor: pointer;
-    background-color: white;
-    color: #7B9EBE;
+    transition: all 0.15s ease-out;
 }
 
 /* direct descendants of vertical/ul/li with form input are hidden until hover/clicked */
@@ -217,10 +371,7 @@ body {
 .vertical ul li div {
     max-height: 0;
     overflow: hidden;
-    max-height: 130px;
-    max-width: 175px;
-    margin-left: auto;
-    margin-right: auto;
+
 }
 
 /* direct descendants of vertical/ul/li with form input that are clicked show div with same descendants*/
@@ -254,95 +405,102 @@ body {
 /* end vertical navigation styling */
 
 
-
-
-
-/* Login CSS Form */
-/* Button used to open the contact form*/
-.open-button 
-{
-    background-color: #6FB091;
-    color: white;
-    padding: 16px 20px;
-    cursor: pointer;
-    opacity: 0.8;
-    position: absolute;
-    top: 23px;
-    right: 28px;
-    width: 100px;
-    border-radius: 7px;
-    border: 2px solid #000000;
+/**QUIZ FORM STYLE**/
+.form {
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 13px ;
+    width:715px;
+    color: #666;
 }
 
-/* The popup form - hidden by default */
-.form-popup 
-{
-    display: none;
-    position: absolute;
-    top: 23px;
-    right: 28px;
-    border: 3px solid #f1f1f1;
-    z-index: 99;
+.form label {
+    display: block;
+    width:400px;
+    margin: 0px 0px 5px;
+}
+.form label>p {
+    float: left;
+    margin-top: 10px;
+    color: #5E5E5E;
+}
+.form input[type="text"], 
+.form textarea, 
+.form select {
+    color: #555;
+    height: 30px;
+    line-height:15px;
+    padding: 0px 0px 0px 10px;
+    margin-top: 2px;
+    border: 1px solid #E5E5E5;
+    background: #e2e2e2;
+    outline: 0;
+    border-radius:4px;
+    margin-left: 10px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: courier;
 }
 
-/* Add styles to the form container */
-.form-container 
-{
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
+.form textarea{
+    height:60px;
+    width: 98%;
+    padding-top: 10px;
+    border-radius:4px;
+    font-family: courier;
+    font-size:12px;
 }
-
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] 
-{
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
+.form select {
+   appearance:none;
+    -webkit-appearance:none; 
+   -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width:100%;
+    height:30px;
+}
+.form .button {
+    background-color: #7b9ebe;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border-radius: 5px;
     border: none;
-    background: #f1f1f1;
+    padding: 7px 22px 7px 22px;
+    width: 100px;
+    border:2px solid #7b9ebe;
+    letter-spacing: 1px;
+    color: #FFF;
+    margin-left: 45%;
+    margin-right: 50%;
+    text-transform: uppercase;
+}
+.form .button:hover {
+	cursor:pointer;
+    background-color:white;
+    border:2px solid #7b9ebe;
+    color:#7b9ebe;
+    transition: all 0.3s ease-out;
+}
+.indent{
+	position:relative;
+	left:25px;
 }
 
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus 
-{
-    background-color: #ddd;
-    outline: none;
+.form label{
+    width: 98%;
+    padding: 10px 5px 10px 10px;
+    border-radius:4px;
+    background: #e2e2e2;
+    margin-left: 10px;
+    font-family: courier;
+    font-size:12px;
+    line-height: 1em;
+    margin-top:10px;
 }
 
-/* Set a style for the login button */
-.form-container .btn 
-{
-    background-color: #6FB091;
-    border-radius: 7px;
-    border: 2px solid #000000;
-    color: white;
-    padding: 16px 20px;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
+.form label:hover{
+	background: rgb(226, 204, 146, 0.4);
+	transition: all 0.35s ease-out;
 }
-
-/* Add a red background color to the cancel button */
-.form-container .cancel 
-{
-    background-color: red;
-    border-radius: 7px;
-    border: 2px solid #000000;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover 
-{
-    opacity: 1;
-}
-/* //Login CSS Form */
-
-
-
-
-
-
 
 
