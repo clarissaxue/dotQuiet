@@ -6,28 +6,57 @@
     <title>Temporary Outline</title>
   </head>
   <body>
-    <div id="title"> 
-      Learn Linux
-    </div>
+    <div class="header">
+			<div class="logo">
+				<img src="dotQuietlogo.png" width="230"alt="logo">
+			</div>
+
+			<div class="navbar">
+				<a href="home">home</a>
+				<a href="home">learn</a>
+				<a href="home">history</a>
+				<a href="home">sources</a>
+      </div>
+      
+      <!-- Login Form -->
+      <button class="open-button" onclick="openForm(this)" id="login">Login</button>
+
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Login Your Information</h1>
+
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="login" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+        </form>
+      </div>
+
+      <!-- Register Form -->
+      <button class="register-button" onclick="openForm(this)" id="login">Register</button>
+
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Login Your Information</h1>
+
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="login" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+        </form>
+      </div>
+		</div>
 
 
-<!-- Login Form -->
-<button class="open-button" onclick="openForm(this)" id="login">Login</button>
 
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Login Your Information</h1>
-
-    <label for="username"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="login" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-  </form>
-</div>
 
 <script>
 function openForm() 
@@ -44,16 +73,34 @@ function closeForm()
 
 
 <div id="wrapper">
+<<<<<<< HEAD
   
 <?php
     
     $path = "./";
     include $path."assets/php/top_nav.php";
+=======
+  <!--
+  <div id="nav">
+        <ul>
+            <li class="navBorder"><a href="index.html">Home</a></li>
+            <li class="navBorder"><a href="#">Learn</a>
+              <ul> 
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Commands</a></li>
+                <li><a href="#">Quiz</a></li>
+              </ul>
+            </li>
+          <li class="navBorder"><a href="#">History</a></li>
+          <li class="navBorder"><a href="#">Sources</a></li>
+        </ul>
+  </div>-->
+
+>>>>>>> d3f18d1b4de9da5d3d86190b6f8b2a7e03e393e9
 
 ?>
 
   <div id="logo">
-    Logo
     <div class="verticalWrapper">
       <nav class="vertical">
         <ul>

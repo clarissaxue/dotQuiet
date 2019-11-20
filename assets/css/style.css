@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* removes all inherited padding and margins*/
 *{
     margin:0;
@@ -346,3 +347,410 @@ body {
 
 
 
+=======
+/* removes all inherited padding and margins*/
+*{
+    margin:0;
+    padding:0;
+
+    /* For Login Form */
+    box-sizing: border-box;
+}
+
+body {
+    background:rgb(226, 204, 146, 0.25);
+	font-family:"Trebuchet MS", Calibri, sans-serif;
+	font-size:15px;
+	line-height: 1.5em;
+	margin: -10px;
+	margin-bottom: 20px;
+    overflow-x: hidden;
+    color:#444;
+}
+
+a {
+    color: #222222;
+    border-bottom: 1px solid #fcfcfc;
+    text-decoration: none;
+    padding:1px 5px 2px 5px;
+}
+
+a:hover {
+   border-bottom: 2px solid #7b9ebe;
+   color:#888888;
+   transition: all 0.3s ease-out;
+}
+
+h2{
+    color:rgb(226, 204, 146);
+    line-height: 2em;
+}
+
+.header{
+	position: fixed;
+	background: #fcfcfc;
+	width:105%;
+	margin-top: -140px;
+	box-shadow:0 4px 10px -4px rgba(0,0,0,.1);
+}
+
+.logo{
+	width:350px;
+	margin-top: -25px;
+	margin-left: 70px;
+}
+
+.navbar{
+	float:right;
+	margin-right:250px;
+	margin-top: -70px;
+	letter-spacing: 1.2px;
+	font-size:16px;
+	text-transform: uppercase;
+	word-spacing: 20px;
+	font-weight: 500;
+}
+
+
+/* Login CSS Form */
+/* Button used to open the contact form*/
+.open-button 
+{
+    color: #7b9ebe;
+    padding: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 47px;
+    right: 175px;
+    width: 70px;
+    border:1px solid #fcfcfc;
+    background-color:#fcfcfc;
+    font-family:"Trebuchet MS", Calibri, sans-serif;
+    font-size:13px;
+    text-transform: uppercase;
+}
+
+.register-button 
+{
+    background-color: #7b9ebe;
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 46px;
+    right: 90px;
+    width: 90px;
+    border-radius: 7px;
+    border: 2px solid#7b9ebe;
+    font-family:"Trebuchet MS", Calibri, sans-serif;
+    font-size:13px;
+    text-transform: uppercase;
+}
+
+/* The popup form - hidden by default */
+.form-popup 
+{
+    display: none;
+    position: absolute;
+    top: 23px;
+    right: 28px;
+    border: 3px solid #f1f1f1;
+    z-index: 99;
+}
+
+/* Add styles to the form container */
+.form-container 
+{
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] 
+{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus 
+{
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the login button */
+.form-container .btn 
+{
+    background-color: #6FB091;
+    border-radius: 7px;
+    border: 2px solid #000000;
+    color: white;
+    padding: 16px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel 
+{
+    background-color: red;
+    border-radius: 7px;
+    border: 2px solid #000000;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover 
+{
+    opacity: 1;
+}
+/* //Login CSS Form */
+
+
+
+#nav{
+    grid-area: nav;
+    background-color: blue;
+    text-align: center; 
+}
+
+#logo {
+    grid-area: logo;
+    text-align: center;
+    background-color: #fcfcfc;
+    border-radius: 5px;
+    box-shadow:1px 4px 10px -4px rgba(0,0,0,.1);
+}
+
+#body {
+    grid-area: body;
+    padding: 15px;
+    background-color: #fcfcfc;
+    margin: 0px 0px 0px 35px;
+    border-radius: 5px;
+    box-shadow:1px 4px 10px -4px rgba(0,0,0,.1);
+}
+
+#footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 25px 0px 0px 0px;
+    color: black;
+    font-size: 1.05em;
+}
+
+#wrapper {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+        "logo  body  body  body"
+        "logo  body  body  body"
+        "logo  body  body  body"
+        "footer footer footer footer";
+        margin: 150px 125px 30px 125px;
+}
+
+
+
+/* styles title of website */
+#title{
+    font-size: 50px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: 450;
+    background-color: #D6A577;
+    text-align: center;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    padding: 15px;
+}
+
+
+
+
+
+
+
+/* all styles for horizontal navigation */
+.navBorder{
+    border-radius: 10px;
+    border: 2px solid #000000;
+}
+
+#nav {
+    background-color: #BE7B7B;
+    border: 2px solid #000000;
+}
+
+#nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+#nav li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    padding: 5px 0px 5px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* hover over top nav items */
+#nav ul li a:hover {
+    background-color: white;
+    color: #7B9EBE;
+    border-radius: 7px;
+}
+
+/* hovering over top nav items makes sub-items appear */
+#nav ul li:hover ul {
+    display: block;
+}
+
+#nav ul li {
+    list-style: none;
+    position: relative;
+    background-color: #7B9EBE;
+    width: 162px;
+    text-align: center;
+}
+
+#nav ul li a {
+    display: block;
+    text-decoration: none;
+}
+
+/* if top items not hovered, hide pages */
+#nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 46px;
+    right: 4px;
+}
+
+#nav ul li ul li{
+    width: 149px;
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-left: 2px solid #000000;
+}
+
+#nav ul li ul li a {
+    padding: 10px 20px;
+    font-size: 22px;
+}
+
+/* sub elemnts of nav (remove border-radius bc conflicting css)*/
+#nav ul li ul li a:hover {
+    border-radius: 0px;
+}
+/* end horizontal nav styling */
+
+
+
+
+
+
+/* all styles for vertical navigation */
+.verticalWrapper {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 450px;
+}
+
+.vertical {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 20px;
+}
+
+.vertical > ul {
+    list-style: none;
+    padding: 2px 20px 50px 20px; 
+}
+
+/* direct descendant of vertical/ul/ with form li becomes verticle (block) */
+.vertical ul li {
+    display: block;
+}
+
+/* direct descendant of vertical/ul/li/ with form label form a becomes blue*/
+.vertical ul li label {
+    background-color:  #7B9EBE;
+    border-radius: 4px;
+    color: white;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 50px;
+    border: 2px solid #7B9EBE;
+
+}
+
+/* direct descendatnts of vertical/ul/li with form label:hover become "clickable" */
+.vertical ul li label:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #7B9EBE;
+    transition: all 0.15s ease-out;
+}
+
+/* direct descendants of vertical/ul/li with form input are hidden until hover/clicked */
+.vertical ul li input {
+    display: none;
+}
+
+/* direct descendants of verical/ul/li with form div are sub-elements of list */
+.vertical ul li div {
+    max-height: 0;
+    overflow: hidden;
+
+}
+
+/* direct descendants of vertical/ul/li with form input that are clicked show div with same descendants*/
+.vertical ul li input:checked + div {
+    max-height: 130px;
+    max-width: 175px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* direct descendants of vertical/ul/li/div/ul/li with form a (subNavs) are styled */
+.vertical ul li div ul li a {
+    background-color: white;
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-left: 2px solid #000000;
+    color: white;
+    background-color: #7B9EBE;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0px 10px 0px;
+    text-decoration: none;
+}
+
+/* direct descendants of vertical/ul/li/div/ul/li:hover with form a (subNavs) are styled */
+.vertical ul li div ul li:hover a {
+    background-color: white;
+    color: #7B9EBE;
+    padding: 10px 0 10px 35px;
+}
+/* end vertical navigation styling */
+
+
+
+
+>>>>>>> d3f18d1b4de9da5d3d86190b6f8b2a7e03e393e9
