@@ -10,9 +10,46 @@
 </head>
 
 <body>
-    
+<div id="wrapper">
+    <?php
+
+        $path = "../../";
+        include $path."assets/php/top_nav.php";
+
+    ?>
+
+  <div id="logo">
+    Logo
+    <div class="verticalWrapper">
+      <nav class="vertical">
+        <ul>
+          <li>
+            <label for="intro">Introduction</label>
+            <input type="radio" id="intro" />
+          </li>
+          <li>
+            <label for="commands">Commands</label>
+            <input type="radio" id="commands" />
+          </li>
+          <li>
+            <label for="quizzes">Quizzes</label>
+            <input type="radio" id="quizzes" />
+            <div>
+              <ul>
+                <li><a href="#">Quiz #1</a></li>
+                <li><a href="#">Quiz #2</a></li>
+                <li><a href="#">Quiz #3</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
 <!-- each div represents a module for the entire lesson-->
-<div>
+<div id="body">
     level 3:
     locate
     ssh
@@ -56,6 +93,13 @@
         locate "lesson3.txt"<br>
     </p>
     
+    <br>
+    <div>
+    <h3>You Can try out abouve listed commands here: </h3>
+        <iframe src="https://bellard.org/jslinux/vm.html?url=https://bellard.org/jslinux/buildroot-x86.cfg" width="800" height="650"></iframe>
+    </div>
+    
 </div>
+    </div>
 
 </body>

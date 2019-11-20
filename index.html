@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>CSS Grid Practice</title>
+    <title>Temporary Outline</title>
   </head>
   <body>
     <div class="header">
@@ -73,44 +73,39 @@ function closeForm()
 
 
 <div id="wrapper">
-  <!--
-  <div id="nav">
-        <ul>
-            <li class="navBorder"><a href="index.html">Home</a></li>
-            <li class="navBorder"><a href="#">Learn</a>
-              <ul> 
-                <li><a href="#">Introduction</a></li>
-                <li><a href="#">Commands</a></li>
-                <li><a href="#">Quiz</a></li>
-              </ul>
-            </li>
-          <li class="navBorder"><a href="#">History</a></li>
-          <li class="navBorder"><a href="#">Sources</a></li>
-        </ul>
-  </div>-->
+  
+<?php
+    
+    $path = "./";
+    include $path."assets/php/top_nav.php";
 
-
+?>
 
   <div id="logo">
     <div class="verticalWrapper">
       <nav class="vertical">
         <ul>
           <li>
-            <label for="intro">Introduction</label>
+            <label id="intro" for="intro"><a href="#">Introduction</a></label>
             <input type="radio" id="intro" />
           </li>
           <li>
-            <label for="commands">Commands</label>
+            <label for="commands">Lessons</label>
             <input type="radio" id="commands" />
+            <div>
+              <ul>
+                <li><a href="#">Easy</a></li>
+                <li><a href="#">Medium</a></li>
+                <li><a href="#">Hard</a></li>
+              </ul>
+            </div>
           </li>
           <li>
             <label for="quizzes">Quizzes</label>
             <input type="radio" id="quizzes" />
             <div>
               <ul>
-                <li><a href="#">Quiz #1</a></li>
-                <li><a href="#">Quiz #2</a></li>
-                <li><a href="#">Quiz #3</a></li>
+                <li><a href="#">Quiz</a></li>
               </ul>
             </div>
           </li>
