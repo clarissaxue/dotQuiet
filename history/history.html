@@ -10,16 +10,47 @@
 </head>
 
 <body>
+
+<div id="wrapper">
+      <?php
+
+        $path = "../";
+        include $path."assets/php/top_nav.php";
+
+    ?>
+
+
+  <div id="logo">
+    Logo
+    <div class="verticalWrapper">
+      <nav class="vertical">
+        <ul>
+          <li>
+            <label for="intro">Introduction</label>
+            <input type="radio" id="intro" />
+          </li>
+          <li>
+            <label for="commands">Commands</label>
+            <input type="radio" id="commands" />
+          </li>
+          <li>
+            <label for="quizzes">Quizzes</label>
+            <input type="radio" id="quizzes" />
+            <div>
+              <ul>
+                <li><a href="#">Quiz #1</a></li>
+                <li><a href="#">Quiz #2</a></li>
+                <li><a href="#">Quiz #3</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
     
 <!-- each div represents a module for the entire lesson-->
-<div>
-    <ul>
-        Tentative list of topics to cover in history section
-        <li>Beginnings as a project by a Finnish student</li>
-        <li>Roots in Unix</li>
-        <li>Open source nature brings about a global effort to create a "freeware"-like Operating System</li>
-        <li>Pervasiveness of Linux and Linux dsitributions</li>
-    </ul>
+<div id="body">
         
     <h2>Beginnings</h2>
 
@@ -45,6 +76,7 @@
         <li><a href="https://elementary.io/">Elementary OS</a></li>
     </ul>
     
+</div>
 </div>
 
 </body>
