@@ -87,6 +87,10 @@ h2{
     height: 100%;
 }
 
+#welcome {
+    padding-top: 13em;
+}
+
 #welcome-text {
     font-size: 1.2em;
 }
@@ -99,7 +103,6 @@ h2{
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;
 }
 
 /* create two unequal columns that sit next to each other */
@@ -111,45 +114,110 @@ h2{
 /* form area, right column */
 .form-area {
     flex: 40%;
-    border: 3px solid red;
 }
 
-/* NEW FORM */
-#loginForm {
-    text-transform: uppercase;
-    width: 100%;
-    border: 3px solid black;
+/**** NEW FORM ****/
+.form-user {
+    font-size: 13px;
+    height: 100%;
+    color: #666;
+    background-color: white;
+    border-radius: 4px;
 }
 
-.form.user > h2 {
+#login-form {
+    padding: 2em 3em 2em 3em;
+}
+
+.form-container > h2 {
     color: #7b9ebe;
-    text-transform: uppercase;
 }
 
-.other-button 
-{
+#user-buttons {
+    padding-top: 1.8em;
+}
+
+.other-button {
     color: #7b9ebe;
     padding: 5px;
+    padding-top: 1em;
     cursor: pointer;
-    border:1px solid #fcfcfc;
-    background-color:#fcfcfc;
-    font-family:"Trebuchet MS", Calibri, sans-serif;
-    font-size:13px;
-    text-transform: uppercase;
+    border: 1px solid white;
+    background-color: white;
+    font-family: "Trebuchet MS", Calibri, sans-serif;
+    font-size: 1.1em;
+    width: 100%;
+    text-align: center;
+    top: 5px;
 }
 
 .main-button 
 {
     background-color: #7b9ebe;
     color: white;
-    padding: 4px;
+    margin-left: 10px;
     cursor: pointer;
     border-radius: 7px;
     border: 2px solid#7b9ebe;
     font-family:"Trebuchet MS", Calibri, sans-serif;
-    font-size:13px;
+    font-size: 1.1em;
+    width: 95%;
+    height: 3em;
 }
-  
+
+.form-user .other-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.form-user .main-button:hover {
+    cursor: pointer;
+    background-color:white;
+    border:2px solid #7b9ebe;
+    color:#7b9ebe;
+    transition: all 0.3s ease-out;
+}
+
+.form-user label>p {
+    float: left;
+    margin-top: 10px;
+    color: #5E5E5E;
+}
+
+.form-user label{
+    display: block;
+    width: 98%;
+    padding: 10px 10px 10px 0;
+    border-radius:4px;
+    margin-left: 10px;
+    font-size: 1.1em;
+    line-height: 1em;
+    margin-top:10px;
+}
+
+.form-user input[type="text"],
+.form-user input[type="password"] {
+    color: #555;
+    height: 4em;
+    width: 95%;
+    font-size: 1.1em;
+    line-height:15px;
+    padding: 0px 0px 0px 10px;
+    margin-top: 2px;
+    border: 1px solid #E5E5E5;
+    background: #e2e2e2;
+    outline: 0;
+    border-radius:4px;
+    margin-left: 10px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: courier;
+}
+
+.indent{
+	position:relative;
+	left:25px;
+}
 
 
 /* NEW FORM END */
@@ -173,54 +241,6 @@ h2{
     padding: 10px;
     background-color: white;
 }
-
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] 
-{
-    width: 50%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-}
-
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus 
-{
-    background-color: #ddd;
-    outline: none;
-}
-
-/* Set a style for the login button */
-.form-container .btn 
-{
-    background-color: #6FB091;
-    border-radius: 7px;
-    border: 2px solid #000000;
-    color: white;
-    padding: 16px 20px;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel 
-{
-    background-color: red;
-    border-radius: 7px;
-    border: 2px solid #000000;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover 
-{
-    opacity: 1;
-}
-/* //Login CSS Form */
-
-
 
 #logo {
     grid-area: logo;

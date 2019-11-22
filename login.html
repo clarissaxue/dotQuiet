@@ -15,22 +15,30 @@
       
     <div id="welcome-wrapper">
             <div class="row">
-                <div class="large">
-                    <h1>Welcome to learnLINUX!</h1>
+                <div class="large" id="welcome">
+                    <h1>Welcome to Learn Linux!</h1>
                     <p id="welcome-text"><span class="blue-text">Sign up</span> to get started or log in to continue from where you left off!</p>
                 </div>
             
                 <div class="form-area">
-                    <div class="form" id="loginForm">
-                        <form action="/action_page.php" class="form-container">
-                            <h2>log in</h2>
+                    <div class="form-user" id="login-form">
+                        <form action="/action_page.php">
+                            <h2>Sign Up</h2>
                 
                             <label for="username"><b>Username</b></label>
-                
-                            <label for="psw"><b>Password</b></label>
-                
-                            <button type="button" class="other-button" onclick="">Sign up</button>
-                            <button type="login" class="main-button">Start Learning!</button>
+                            <input type="text" placeholder="Enter Username" name="username" required>
+                  
+                            <label for="pass"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="pass" required>
+
+                            <label for="pass2"><b>Re-Type Password</b></label>
+                            <input type="password" placeholder="Enter Password Again" name="pass2" required>
+                            
+                            <div id="user-buttons">
+                                <button type="login" class="main-button">Create Account</button>
+                                <button type="button" class="other-button" onclick="">Log In</button>
+                            </div>
+
                         </form>
                     </div>
                 </div>
