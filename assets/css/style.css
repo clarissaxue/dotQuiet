@@ -68,6 +68,7 @@ h2{
 
 .navbar{
 	float:right;
+	width: 510px;
 	margin-right:125px;
 	margin-top: -70px;
 	letter-spacing: 1.2px;
@@ -149,6 +150,30 @@ h2{
     width: 100%;
     text-align: center;
     top: 5px;
+}
+
+/* uses .other-button class aside from border radius */
+.logout-button {
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #7b9ebe;
+    background-color: #7b9ebe;
+    font-family: "Trebuchet MS", Calibri, sans-serif;
+    font-size: 1.1em;
+    width: 20%;
+    text-align: center;
+    top: 5px;
+    border-radius: 7px;
+    text-transform: uppercase;
+    margin-left: 25px;
+}
+
+.logout-button:hover {
+    cursor: pointer;
+    background-color:white;
+    color: #7b9ebe;
+    transition: all 0.3s ease-out;
 }
 
 .main-button 
