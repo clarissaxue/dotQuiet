@@ -1,25 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Quiz 1</title>
-		<link rel="shortcut icon" href="dotQuietfav.png" />
-		<link rel="stylesheet" href="../../assets/css/style2.css">
-	</head>
+<?php 
 
-	<body>
-		<div class="header">
-			<div class="logo">
-				<img src="dotQuietlogo.png" width="230"alt="logo">
-			</div>
+    $path = "../../";
+    $title = "Quiz 1";
 
-			<div class="navbar">
-				<a href="home">home</a>
-				<a href="home">learn</a>
-				<a href="home">history</a>
-				<a href="home">sources</a>
-			</div>
-		</div>
+    include $path."assets/php/header.php";
+
+?>
 
 
 		<div class="quiz">
@@ -74,6 +60,9 @@
 			    
 			</form>
 		</div>
-	</body>
 
-</html>
+<?php
+
+    include $path."assets/php/footer.php";
+
+?>

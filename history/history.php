@@ -1,31 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
 
-<head>
-  <meta charset="utf-8">
-  <title>Lesson 3</title>
-  <meta name="author" content="dotQuiet">
-  
-  <link href="../assets/css/style.css" rel="stylesheet">
-</head>
+    $path = "../";
+    $title = "Linux History";
 
-<body>
+    include $path."assets/php/header.php";
 
-<div id="wrapper">
-  
-</div>
-    <div class="header">
-			<div class="logo">
-				<img src="../assets/imgs/dotQuietlogo.png" width="230"alt="logo">
-			</div>
-
-			<div class="navbar">
-				<a href="home">home</a>
-				<a href="home">learn</a>
-				<a href="home">history</a>
-				<a href="home">sources</a>
-      </div>
-    </div>
+?>
     
 <!-- each div represents a module for the entire lesson-->
 <div id="body">
@@ -55,6 +35,9 @@
     </ul>
     
 </div>
-</div>
 
-</body>
+<?php
+
+    include $path."assets/php/footer.php";
+
+?>
