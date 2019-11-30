@@ -1,25 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Quiz 1</title>
-		<link rel="shortcut icon" href="dotQuietfav.png" />
-		<link rel="stylesheet" href="../../assets/css/style2.css">
-	</head>
+<?php 
 
-	<body>
-		<div class="header">
-			<div class="logo">
-				<img src="dotQuietlogo.png" width="230"alt="logo">
-			</div>
+    $path = "../../";
+    $title = "Quiz 1";
 
-			<div class="navbar">
-				<a href="home">home</a>
-				<a href="home">learn</a>
-				<a href="home">history</a>
-				<a href="home">sources</a>
-			</div>
-		</div>
+    include $path."assets/php/header.php";
+
+?>
 
 
 		<div class="quiz">
@@ -27,7 +13,7 @@
 			    <h1>Quiz</h1>
 
 			    	<br>
-			    	<p>How will you print the current working directory? </p>
+			    	<p>What command prints the current working directory? </p>
 			    		<label for="choice1"><input type="radio" id="choice1" name="mc"/> ls</label>
 			    		<label for="choice2"><input type="radio" id="choice2" name="mc"/> cd</label>
 			    		<label for="choice3"><input type="radio" id="choice3" name="mc"/> pwd</label>
@@ -36,7 +22,7 @@
 			  		<br>
                 
                     <br>
-			    	<p>How will you list the content of the current working directory? </p>
+			    	<p>What command lists the contents of the current working directory? </p>
 			    		<label for="choice1"><input type="radio" id="choice1" name="mc"/> ls</label>
 			    		<label for="choice2"><input type="radio" id="choice2" name="mc"/> cd</label>
 			    		<label for="choice3"><input type="radio" id="choice3" name="mc"/> pwd</label>
@@ -44,7 +30,7 @@
 			  		<br>
                 
                     <br>
-			    	<p>How will you create a new directory current working directory? </p>
+			    	<p>What command creates a new directory in the current working directory? </p>
 			    		<label for="choice1"><input type="radio" id="choice1" name="mc"/> rmdir</label>
 			    		<label for="choice2"><input type="radio" id="choice2" name="mc"/> cd</label>
 			    		<label for="choice3"><input type="radio" id="choice3" name="mc"/> man</label>
@@ -52,7 +38,7 @@
 			  		<br>
                 
                     <br>
-			    	<p>How will you remove a directory from the current working directory? </p>
+			    	<p>What command removes a directory from the current working directory? </p>
 			    		<label for="choice1"><input type="radio" id="choice1" name="mc"/> rmdir</label>
 			    		<label for="choice2"><input type="radio" id="choice2" name="mc"/> cd</label>
 			    		<label for="choice3"><input type="radio" id="choice3" name="mc"/> clear</label>
@@ -60,7 +46,7 @@
 			  		<br>
                 
                     <br>
-			    	<p>How will you look at the user manual? </p>
+			    	<p>What command grants access to the user manual? </p>
 			    		<label for="choice1"><input type="radio" id="choice1" name="mc"/> man</label>
 			    		<label for="choice2"><input type="radio" id="choice2" name="mc"/> clear</label>
 			    		<label for="choice3"><input type="radio" id="choice3" name="mc"/> help</label>
@@ -74,6 +60,9 @@
 			    
 			</form>
 		</div>
-	</body>
 
-</html>
+<?php
+
+    include $path."assets/php/footer.php";
+
+?>

@@ -1,56 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
-    <title>Learn Linux : Quiz</title>
-  </head>
-  <body>
-		<div class="header">
-			<div class="logo">
-				<img src="../../dotQuietlogo.png" width="230"alt="logo">
-			</div>
+<?php 
 
-			<div class="navbar">
-				<a href="home">home</a>
-				<a href="home">learn</a>
-				<a href="home">history</a>
-				<a href="home">sources</a>
-			</div>
-		  
-		</div>
-	
-	
-	<div id="wrapper">
-	
-	
-	  <div id="logo">
-		<div class="verticalWrapper">
-		  <nav class="vertical">
-			<ul>
-			  <li>
-				<label for="intro">Introduction</label>
-				<input type="radio" id="intro" />
-			  </li>
-			  <li>
-				<label for="commands">Commands</label>
-				<input type="radio" id="commands" />
-			  </li>
-			  <li>
-				<label for="quizzes">Quizzes</label>
-				<input type="radio" id="quizzes" />
-				<div>
-				  <ul>
-					<li><a href="#">Quiz #1</a></li>
-					<li><a href="#">Quiz #2</a></li>
-					<li><a href="#">Quiz #3</a></li>
-				  </ul>
-				</div>
-			  </li>
-			</ul>
-		  </nav>
-		</div>
-	  </div>
+    $path = "../../";
+    $title = "Quiz Template";
+
+    include $path."assets/php/header.php";
+
+?>
 	
 	  <div id="body">
 			<form action="" method="get" class="form">
@@ -87,14 +42,11 @@
 					
 				
 			</form>
+        </div>
 		
 		
-		</div>
-	
-	  <div id="footer">
-		  <p>&#x24B8;Copyright 2019 Group dotQuiet</p>
-	  </div>
-	</div>
-	
-	  </body>
-	</html>
+<?php
+
+    include $path."assets/php/footer.php";
+
+?>

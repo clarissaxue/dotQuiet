@@ -1,114 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
 
-<head>
-  <meta charset="utf-8">
-  <title>Lesson 2</title>
-  <meta name="author" content="dotQuiet">
-  
-  <link href="../../assets/css/style.css" rel="stylesheet">
-</head>
+    $path = "../../";
+    $title = "Lesson 2";
 
-<body>
-        <div class="header">
-                <div class="logo">
-                    <img src="../../dotQuietlogo.png" width="230"alt="logo">
-                </div>
-    
-                <div class="navbar">
-                    <a href="home">home</a>
-                    <a href="home">learn</a>
-                    <a href="home">history</a>
-                    <a href="home">sources</a>
-          </div>
-          
-          <!-- Login Form -->
-          <button class="open-button" onclick="openForm(this)" id="login">Login</button>
-    
-          <div class="form-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
-              <h1>Login Your Information</h1>
-    
-              <label for="username"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="username" required>
-    
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-    
-              <button type="login" class="btn">Login</button>
-              <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-            </form>
-          </div>
-    
-          <!-- Register Form -->
-          <button class="register-button" onclick="openForm(this)" id="login">Register</button>
-    
-          <div class="form-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
-              <h1>Login Your Information</h1>
-    
-              <label for="username"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="username" required>
-    
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-    
-              <button type="login" class="btn">Login</button>
-              <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-            </form>
-          </div>
-            </div>
-    
-    
-    
-    
-    <script>
-    function openForm() 
-    {
-      document.getElementById("myForm").style.display = "block";
-    }
-    
-    function closeForm() 
-    {
-      document.getElementById("myForm").style.display = "none";
-    }
-    </script>
-    <!-- // Login Form -->
-    
-    
-    <div id="wrapper">
-      <div id="logo">
-        <div class="verticalWrapper">
-          <nav class="vertical">
-            <ul>
-              <li>
-                <label for="intro">Introduction</label>
-                <input type="radio" id="intro" />
-              </li>
-              <li>
-                <label for="commands">Commands</label>
-                <input type="radio" id="commands" />
-              </li>
-              <li>
-                <label for="quizzes">Quizzes</label>
-                <input type="radio" id="quizzes" />
-                <div>
-                  <ul>
-                    <li><a href="#">Quiz #1</a></li>
-                    <li><a href="#">Quiz #2</a></li>
-                    <li><a href="#">Quiz #3</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    
-      <div id="body">
+    include $path."assets/php/header.php";
+
+?>
+
+<div id="body">
         
         <!-- each div represents a module for the entire lesson-->
-<div>
+    <div>
     
         <h2>Lesson 2</h2>
         
@@ -134,7 +36,7 @@
         
         <h3>rm</h3>
         <p>
-            Your computer could get pretty cluttered if there were no way to remove files, try removing the file you just created with "rm".
+            Your computer could get pretty cluttered if there were no way to remove files, this is where the "rm" (remove) command comes in, list the name of the file directly after the "rm" command to remove it.
         </p>
         
         
@@ -151,7 +53,8 @@
         <h3>mv</h3>
         
         <p>
-            Moving files to their appropriate folders is equally important to making them, change to the directory 'books' and move the file 'The Shining.pdf' to the directory above.  (hint: recall that ".." represents the directory )
+            Moving files to their appropriate folders is equally important to making them, the "mv" (move) command helps us accomplish this.  Files can be moved to a specified directory like this: mv [file] [directory].<br><br>
+            Renaming files with the terminal also uses the "mv" command, as long as there is no conflict between file names and directories are not confused for files.  Use the "mv" command like this to rename a file: mv [file] [new filename].
             
             <br>(for backend programmers: this requires the user to use "cd books" and "mv 'The Shining.pdf' ..")
         </p>
@@ -175,7 +78,7 @@
             books letters 'song lyrics' 'The Shining.pdf'
         </p>
         
-        <h3>mv pt. 2</h3>
+        <h3>mv pt. 2 (sectio can be excluded, it was moved up)</h3>
         
         <p>
             Renaming files with the terminal also uses mv, as long as there is no conflict between file names and directories are not confused for files.  Move to the "letters" directory and change the name of 'Recommendation Letter.txt' to 'Final Recommendation Letter.txt' (Hint: mv (current file name) (new file name)).
@@ -193,7 +96,9 @@
         <h3>chmod</h3>
         
         <p>
-            Directories and files can have their permissions changed through the Linux terminal.  This is useful for collaborative computing environments where one has to restrict or allow access to certain files.  Move to the directory 'song lyrics' (one above where you are now) and try typing "ls -l" into the terminal, the permissions should appear to the left of each item in the current directory. (Tip: the "-l" next to "ls" is called an option, in this case "long", that alters the output of commands).
+            Directories and files can have their permissions changed through the Linux terminal.  This is useful for collaborative computing environments where one has to restrict or allow access to certain files.  Typing "ls -l" allows us to see all of the permission codes and details of the files in our system.<br><br>
+            The 10 character string that begins each line resulting from "ls -l" shows us the permissions of each file or directory.  The "d" or "-" at the beginning indicates a directory or file respectively and each grouping of three letters shows us 1: the owner, 2: group, and 3: global access of reading (r), writing (w) or executing (x), where a letter indicates permission and a dash (-) indicates no permission.<br><br>
+            These permissions are changed using numbers in what is called an "octal mode" that adds permission numbers at each bit.  This detail is beyond the scope of this lesson, but further reading can be found <a href="https://www.astro.princeton.edu/docs/chmod#Octal_modes">here.</a>
         </p>
         
         <p>
@@ -207,7 +112,7 @@
             -r-xr-xr-x dotQuiet dotQuiet (size) (timestamp) 'Amazing Grace.txt'
         </p>
         
-        <h3>chmod cont.</h3>
+        <h3>chmod cont. (moved to previous section)</h3>
         
         <p>
             The 10 character string that begins each line resulting from "ls -l" shows us the permissions of each file or directory.  The "d" or "-" at the beginning indicates a directory or file respectively and each grouping of three letters shows us 1: the owner, 2: group, and 3: global access of reading (r), writing (w) or executing (x), where a letter indicates permission and a dash (-) indicates no permission.  We use "chmod" (change mode) with a 3 digit number to update permissions where the digits indicate the permissions of the owner, group, and all other users (global).<br>
@@ -233,7 +138,7 @@
        <h3>wildcards (*)</h3>
         
         <p>
-            The Linux terminal can do some powerful things with very few characters.  One good example of this fact are wildcards, operators added to commands that select all files that fulfill certain requirements.  The wildcard we will look at is "*", which when followed or preceded by a string of characters, selects files that end or start with that string.  Change to the "rock" directory and remove all lyric files by "The Beatles".  (Hint: every lyric file you need to remove starts with "The Beatles").
+            The Linux terminal can do some powerful things with very few characters.  One good example of this fact are wildcards, operators added to commands that select all files that fulfill certain requirements.  The wildcard we will look at is "*", which when followed or preceded by a string of characters, selects files that end or start with that string, example: "rm [start of string]*" or "rm *[end of string]", a command that removes all files that start or end with a certain set of characters.
         </p>
         
         <p>
@@ -250,12 +155,10 @@
             'The Doors - Light My Fire.txt' 'The Doors - The End.txt'
         </p>
         
-        </div>
-    
-      <div id="footer">
-          <p>&#x24B8;Copyright 2019 Group dotQuiet</p>
-      </div>
     </div>
-    
-      </body>
-    </html>
+
+<?php
+
+    include $path."assets/php/footer.php";
+
+?>
