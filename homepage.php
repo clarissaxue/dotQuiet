@@ -10,6 +10,7 @@
   <div id="body">
     
     <h2>Overview</h2>
+      
     <p>
         Linux is an Operating System (OS) that was created in the 1990s under the vision that computing should be open-source and accessible to everyone.  Its influence is far reaching, powering the software of phones, appliances, and supercomputers alike.
     </p>

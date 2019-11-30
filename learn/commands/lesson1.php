@@ -28,7 +28,7 @@
     
     <h3>ls</h3>
     <p>
-        While keeping track of what directory we're in is important, we need to know where we are going and what we can do in the current directory.
+        While keeping track of what directory we're in is important, we need to know where we are going and what we can do in the current directory. The  "ls" command allows us to list out the contents of the current directory, including files and other subdirectories (usually marked by different colors in modern terminals).
         Try typing "ls" into the terminal to <strong>list</strong> the contents of the current directory!
     </p>
     
@@ -43,7 +43,7 @@
     
     <h3>cd</h3>
     <p>
-        Let's see what's in those directories, try typing "cd" (change directory) followed by a space and the name of the directory you want to change to (ex: cd dir1) (Tip: two dots (..) represents the directory above the one you're in, one dot (.) represents the directory you're currently in).
+        To change to a sub-directory of the current directory, we can use "cd" (change directory) command followed by a space and the name of the directory you want to change to (ex: cd dir1) (Tip: two dots (..) represents the directory above the one you're in, one dot (.) represents the directory you're currently in).
     </p>
     
     
@@ -52,7 +52,7 @@
         (nothing)  
     </p>
     
-    <h3>cd pt. 2 (may not need its own header)</h3>
+    <h3>cd pt. 2 (may not need its own header, could be removed in final version)</h3>
     
     <p>
         Don't worry, you did it right.  Sometimes the terminal displays nothing, this usually indicates that something happened behind the scenes, the terminal  will warn you when something isn't right.
@@ -67,7 +67,7 @@
     
     <h3>mkdir</h3>
     <p>
-        Looking good! You're well on your way to Linux mastery! Try making your own directory by typing "mkdir" followed by a space and the name of your new directory (tip: directory and file names with spaces must be separated by backslashes or wrapped in quotes.  Ex: birds\ of\ the\ world, "the island of hawaii.pdf").
+        You're well on your way to Linux mastery! You can make your own directories by typing "mkdir" followed by a space and the name of your new directory (tip: directory and file names with spaces must be separated by backslashes or wrapped in quotes.  Ex: birds\ of\ the\ world, "the island of hawaii.pdf").
     </p>
     
     
@@ -75,7 +75,7 @@
         Terminal Result (displayed after typing correct answer):
     </p>
     
-    <h3>mkdir pt. 2 (may not need its own label)</h3>
+    <h3>mkdir pt. 2 (may not need its own label, could be excluded from final version)</h3>
     
     <p>
         Type "ls" to see the new directory you made!
@@ -88,7 +88,7 @@
     
     <h3>rmdir</h3>
     <p>
-        Sometimes its necessary to remove a directory.  Try removing one of the directories in the current directory using "rmdir" followed by a space and the directory name.
+        Sometimes its necessary to remove a directory, this is where the "rmdir" (remove directory) command comes in.  You can remove directories in the current directory using "rmdir" followed by a space and the directory name (tip: this only works for directories that are empty, you'll learn more about removing files from directories in Lesson 2 in order to make a directory empty for removal).
     </p>
     
     
@@ -110,7 +110,7 @@
     
     <h3>clear</h3>
     <p>
-        Working in the terminal produces a lot of text feedback, type "clear" at any time to remove all command history.  Any changes you made to the file structure will stay, this command is simply used to start fresh.
+        Working in the terminal produces a lot of text feedback, type "clear" at any time to remove all command history.  Any changes you made to the file structure will stay, this command is simply refresh the display.
     </p>
     
     

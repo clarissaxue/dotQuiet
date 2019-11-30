@@ -15,12 +15,11 @@
         level 3:
         locate
         ssh
-        (more to be decided on)
         
         <h3>locate</h3>
         
         <p>
-            The examples provided up to this point have used relatively uncrowded file systems, in reality, your operating system will become crowded very quickly with programs, media, and other files.  One rememdy to this problem is the "locate" command, which displays all files that satisfy your criteria and their locations.  Use "locate" and your knowledge of wildcards to display all files that end in '.txt'.
+            The examples provided up to this point have used relatively uncrowded file systems, in reality, your operating system will become crowded very quickly with programs, media, and other files.  One rememdy to this problem is the "locate" command, which displays all files that satisfy your criteria and their locations.  The "locate" command pairs well with wildcards, allowing a Linux user to locate all files of a certain type (example: "locate *.txt" or "locate *.pdf" ).
         </p>
         
         <p>
@@ -42,7 +41,8 @@
        <h3>ssh</h3>
         
         <p>
-            Collaborative system are an essental part of nearly all computing environments today.  Servers can be accessed through the "ssh" (Secure Shell) command, allowing users to interact with files on another system (in this case, a server).  Access our server with the command "ssh dotQuiet.org" and find the location of the file "lesson3.txt".
+            Collaborative system are an essental part of nearly all computing environments today.  Servers can be accessed through the "ssh" (Secure Shell) command, allowing users to interact with files on another system (in this case, a server).  Server access often requires authentication (with a username and password), example: "ssh dotquiet.org" may require a username and password and will grant you access to the server if valid.<br><br>
+            Your username can also be specified by including it in the ssh command: "ssh username@dotquiet.org"
         </p>
         
         <p>
