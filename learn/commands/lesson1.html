@@ -5,11 +5,24 @@
   <meta charset="utf-8">
   <title>Lesson 1</title>
   <meta name="author" content="dotQuiet">
+    <script src="../../assets/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/bower_components/jquery.terminal/js/jquery.terminal.min.js"></script>
+<link href="../../assets/bower_components/jquery.terminal/css/jquery.terminal.min.css"/>
   
   <link href="../../assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
+<div id="wrapper">
+     <?php
+
+        $path = "../../";
+        include $path."assets/php/top_nav.php";
+
+    ?>
+
+
+  <div id="logo">
     <div class="header">
 			<div class="logo">
 				<img src="../../dotQuietlogo.png" width="230"alt="logo">
@@ -111,26 +124,161 @@ function closeForm()
     <!--Terminal functionality will require a JavaScript backend-->
     <h2>Lesson 1</h2>
         
+    <div>  
+        <script>
+    jQuery(function($, undefined) {
+    $('#pwd').terminal(function(command) {
+            if (command == "pwd") {
+                this.echo("/dotQuiet/lesson1/" );
+            }
+            else{
+                this.echo("wrong command try pwd" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+    
+    $('#ls').terminal(function(command) {
+            if (command == "ls") {
+                this.echo("dir1 dir2 dir3 welcome.txt" );
+            }
+            else{
+                this.echo("wrong command try ls" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
         
+    $('#cd').terminal(function(command) {
+        var cd = "cd ?"
+            if (command.match(cd)) {
+                this.echo("Correct command for changing directory" );
+            }
+            else{
+                this.echo("wrong command try cd" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+        
+    $('#cd2').terminal(function(command) {
+            if (command == "pwd") {
+                this.echo("/dotQuiet/lesson1/dir1" );
+            }
+            else{
+                this.echo("wrong command try pwd" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+        
+    $('#mkdir').terminal(function(command) {
+        var mkdir = 'mkdir ?';
+        var name;
+            if (command.match(mkdir)) {
+                name = command.split(" ");
+                this.echo("Correct command for changing directory")
+            }
+            else if (command == "ls"){
+                this.echo("/dotQuiet/lesson1/" + name[1] );
+                     }
+            else{
+                this.echo("wrong command try ls/mkdir" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+        
+    $('#rmdir').terminal(function(command) {
+         var rmdir = "rmdir ?"
+            if (command.match(rmdir)) {
+                this.echo("Correct command for removing directory" );
+            }
+            else{
+                this.echo("wrong command try rmdir" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+    
+    $('#clear').terminal(function(command) {
+            if (command == "clear") {
+                term.clear();
+            }
+            else{
+                this.echo("wrong command try clear" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+        $('#man').terminal(function(command) {
+            if (command == "man") {
+                this.echo("This is display manual");
+            }
+            else{
+                this.echo("wrong command try man" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+        
+});
+      </script>
     <h3>pwd</h3>
     <p>
         The Linux terminal begins at the root directory, denoted with a slash (/), and works its way down to subdirectories.
         Try typing "pwd" (print working directory) in the terminal to see which directory you're in!
     </p>
-    
-    
+    <div id="pwd"></div>
+<!--
+        
     <p>
         Terminal Result (displayed after typing correct answer):
         /dotQuiet/lesson1/
     </p>
+-->
+    </div>
     
     <h3>ls</h3>
     <p>
         While keeping track of what directory we're in is important, we need to know where we are going and what we can do in the current directory.
         Try typing "ls" into the terminal to <strong>list</strong> the contents of the current directory!
     </p>
+    <div id="ls"></div>
     
-    
+<!--
     <p>
         Terminal Result (displayed after typing correct answer):
         dir1 dir2 dir3 welcome.txt
@@ -138,17 +286,20 @@ function closeForm()
         Additional comments (that display off the terminal in the lesson section):
         The current directory has three directories (in "color1") and a text file "welcome.txt" (in "color2")
     </p>
+-->
     
     <h3>cd</h3>
     <p>
         Let's see what's in those directories, try typing "cd" (change directory) followed by a space and the name of the directory you want to change to (ex: cd dir1) (Tip: two dots (..) represents the directory above the one you're in, one dot (.) represents the directory you're currently in).
     </p>
-    
+    <div id="cd"></div>
+<!--
     
     <p>
         Terminal Result (displayed after typing correct answer):
         (nothing)  
     </p>
+-->
     
     <h3>cd pt. 2 (may not need its own header)</h3>
     
@@ -157,27 +308,35 @@ function closeForm()
         
         Type "pwd" again to see that you changed to the right directory.
     </p>
+      
+    <div id="cd2"></div>
         
+<!--
     <p>
         Terminal result:
         /dotQuiet/lesson1/(dir entered from before)/
     </p>
+-->
     
     <h3>mkdir</h3>
     <p>
         Looking good! You're well on your way to Linux mastery! Try making your own directory by typing "mkdir" followed by a space and the name of your new directory (tip: directory and file names with spaces must be separated by backslashes or wrapped in quotes.  Ex: birds\ of\ the\ world, "the island of hawaii.pdf").
     </p>
-    
-    
+
+<!--
     <p>
         Terminal Result (displayed after typing correct answer):
     </p>
+-->
     
     <h3>mkdir pt. 2 (may not need its own label)</h3>
+    
     
     <p>
         Type "ls" to see the new directory you made!
     </p>
+      
+    <div id="mkdir"></div>
     
     <p>
         Terminal Result (displayed after typing the correct answer):
@@ -190,43 +349,54 @@ function closeForm()
     </p>
     
     
+<!--
     <p>
         Terminal Result (displayed after typing correct answer):
         (none)
     </p>
     
+-->
     <h3>rmdir pt. 2 (may not need its own label)</h3>
     
     <p>
         Type "ls" to see the current directory's contents, the directory you listed in your input should be gone!
     </p>
     
+      <div id="rmdir"></div>
+<!--
     <p>
         Terminal Result (displayed after typing the correct answer):
         (name of the new directory the user made) (other directories or files included in the directory they changed to, minus the one they removed)
     </p>
     
+-->
     <h3>clear</h3>
     <p>
         Working in the terminal produces a lot of text feedback, type "clear" at any time to remove all command history.  Any changes you made to the file structure will stay, this command is simply used to start fresh.
     </p>
     
-    
+    <div id="clear"></div>
+      
+<!--
     <p>
         Terminal Result (displayed after typing correct answer):
         (session restart)
     </p>
+-->
     
     <h3>man</h3>
+    
     
     <p>
         If you ever find yourself lost while using the terminal, you can always look to the <strong>manual.</strong> Try typing "man" to see a list of commands and their uses. 
     </p>
-    
+    <div id="man"></div>
     <p>
+<!--
         Terminal Result (displayed after typing the correct answer):
         (manual)
     </p>
+-->
     
     </div>
 
@@ -234,6 +404,7 @@ function closeForm()
       <p>&#x24B8;Copyright 2019 Group dotQuiet</p>
   </div>
 </div>
-
+    </div>
+    </div>
   </body>
 </html>

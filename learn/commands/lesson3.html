@@ -5,11 +5,14 @@
   <meta charset="utf-8">
   <title>Lesson 3</title>
   <meta name="author" content="dotQuiet">
-  
+  <script src="../../assets/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/bower_components/jquery.terminal/js/jquery.terminal.min.js"></script>
+<link href="../../assets/bower_components/jquery.terminal/css/jquery.terminal.min.css"/>
   <link href="../../assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
+    
         <div class="header">
                 <div class="logo">
                     <img src="../../dotQuietlogo.png" width="230"alt="logo">
@@ -72,6 +75,38 @@
     {
       document.getElementById("myForm").style.display = "none";
     }
+        
+    jQuery(function($, undefined) {
+         $('#locate').terminal(function(command) {
+            if (command == "locate *.txt") {
+                this.echo("displays all text files in system" );
+            }
+            else{
+                this.echo("wrong command try locate *.txt ");
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+    $('#ssh').terminal(function(command) {
+            if (command == "ssh dotQuiet.org") {
+                this.echo("dotQuiet.org connected" );
+            }
+            else{
+                this.echo("wrong command try ssh dotQuiet.org");
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+        
+});
     </script>
     <!-- // Login Form -->
     
@@ -109,6 +144,7 @@
         
         <!-- each div represents a module for the entire lesson-->
     <div>
+        
         <h2>Lesson 3</h2>
         level 3:
         locate
@@ -120,6 +156,7 @@
         <p>
             The examples provided up to this point have used relatively uncrowded file systems, in reality, your operating system will become crowded very quickly with programs, media, and other files.  One rememdy to this problem is the "locate" command, which displays all files that satisfy your criteria and their locations.  Use "locate" and your knowledge of wildcards to display all files that end in '.txt'.
         </p>
+        <div id="locate"></div>
         
         <p>
             (Will display directory contents on entry to page)<br>
@@ -143,6 +180,7 @@
             Collaborative system are an essental part of nearly all computing environments today.  Servers can be accessed through the "ssh" (Secure Shell) command, allowing users to interact with files on another system (in this case, a server).  Access our server with the command "ssh dotQuiet.org" and find the location of the file "lesson3.txt".
         </p>
         
+        <div id="ssh"></div>
         <p>
             commands required:
             ssh dotQuiet.org<br>
@@ -159,6 +197,6 @@
           <p>&#x24B8;Copyright 2019 Group dotQuiet</p>
       </div>
     </div>
-    
+    </div>
       </body>
     </html>

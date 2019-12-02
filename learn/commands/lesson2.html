@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <title>Lesson 2</title>
   <meta name="author" content="dotQuiet">
-  
+    <script src="../../assets/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/bower_components/jquery.terminal/js/jquery.terminal.min.js"></script>
+<link href="../../assets/bower_components/jquery.terminal/css/jquery.terminal.min.css"/>
   <link href="../../assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -72,7 +74,138 @@
     {
       document.getElementById("myForm").style.display = "none";
     }
-    </script>
+    
+    jQuery(function($, undefined) {
+    $('#touch').terminal(function(command) {
+            if (command =="touch song.txt") {
+                this.echo("dir1 dir2 dir3 welcome.txt song.txt" );
+            }
+            else{
+                this.echo("wrong command try touch song.txt" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+    
+    $('#rm').terminal(function(command) {
+            if (command =="rm song.txt") {
+                this.echo("success" );
+                this.echo("dir1 dir2 dir3 welcome.txt" );
+            }
+            else{
+                this.echo("wrong command try rm song.txt" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+    
+    $('#mv').terminal(function(command) {
+            if (command.match("cd books")) {
+                this.echo("directory changed" );
+            }
+            else if (command.match("mv 'The Shining.pdf' ..")) {
+                this.echo("success" );
+            }
+            else{
+                this.echo("wrong command try cd books and mv 'The Shining.pdf' .." );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+    $('#mv2').terminal(function(command) {
+            if (command.match("cd books")) {
+                this.echo("directory changed" );
+            }
+            else if (command.match("mv 'The Shining.pdf' ..")) {
+                this.echo("success" );
+            }
+            else{
+                this.echo("wrong command try cd books and mv 'The Shining.pdf' .." );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+    
+    $('#chmod').terminal(function(command) {
+            if (command == "../'song lyrics'" || "cd .. \ cd 'song lyrics'") {
+                this.echo("directory changed" );
+            }
+            else if (command== "ls -l") {
+                this.echo("drwxr-xr-x dotQuiet dotQuiet (size) (timestamp) pop" );
+                this.echo("drwxr-xr-x dotQuiet dotQuiet (size) (timestamp) rock" );
+                this.echo("-r-xr-xr-x dotQuiet dotQuiet (size) (timestamp) 'Amazing Grace.txt'" );
+            }
+            else{
+                this.echo("wrong command try cd ../'song lyrics' or cd .. \ cd 'song lyrics'" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+    
+        $('#chmod2').terminal(function(command) {
+            if (command == " chmod 'Amazing Grace.txt' 775") {
+                this.echo("permission changed" );
+            }
+            else if (command== "ls -l") {
+                this.echo("drwxr-xr-x dotQuiet dotQuiet (size) (timestamp) pop" );
+                this.echo("drwxr-xr-x dotQuiet dotQuiet (size) (timestamp) rock" );
+                this.echo("-rwxr-xr-x  dotQuiet dotQuiet (size) (timestamp) 'Amazing Grace.txt'" );
+            }
+            else{
+                this.echo("wrong command try  chmod 'Amazing Grace.txt'" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+        
+    $('#wildcard').terminal(function(command) {
+            if (command == "cd rock") {
+                this.echo("directory changed" );
+            }
+            else if (command== "ls -l" || "ls") {
+                this.echo("'The Beatles - I Am The Walrus.txt' 'The Beatles - Hey Jude.txt' 'The Beatles - Strawberry Fields Forever.txt' 'The Doors - Light My Fire.txt' 'The Doors - The End.txt'" );
+            }
+            else if (command== "rm 'The Beatles'*") {
+                this.echo("all files removed" );
+                his.echo("'The Doors - Light My Fire.txt' 'The Doors - The End.txt'" );
+            }
+            else{
+                this.echo("wrong command try cd then ls (or ls -l)" );
+            }
+        }
+    , {
+        greetings: 'Linux terminal',
+        height: 200,
+        width: 450,
+        prompt: '> '
+    });
+        
+});
+      </script>
     <!-- // Login Form -->
     
     
@@ -117,15 +250,18 @@
         
         <h3>touch</h3>
         <p>
-            So far we've covered how to move through, make, and remove directories, but we have no way of populating those directories with files.  This is where "touch" comes in, creating a file with the name listed after the command.  Try creating a file using the terminal (Tip: use an extension like ".txt" on the end of your file's name so other programs can open it).
+            So far we've covered how to move through, make, and remove directories, but we have no way of populating those directories with files.  This is where "touch" comes in, creating a file with the name listed after the command.  Try creating a file naming song.txt using the terminal (Tip: use an extension like ".txt" on the end of your file's name so other programs can open it).
         </p>
         
+    <div id="touch"></div>
         
+<!--
         <p>
             Terminal Result (displayed after typing correct answer, will automatically "use ls"):
             books letters 'song lyrics' (name of the file created by "touch")
             
         </p>
+-->
         
         <p>
             Additional comments:
@@ -136,12 +272,14 @@
         <p>
             Your computer could get pretty cluttered if there were no way to remove files, try removing the file you just created with "rm".
         </p>
+        <div id="rm"></div>
         
-        
+<!--
         <p>
             Terminal Result (displayed after typing correct answer, will automatically "use ls"):
             books letters 'song lyrics'
         </p>
+-->
         
         <p>
             Additional comments:
@@ -156,7 +294,8 @@
             <br>(for backend programmers: this requires the user to use "cd books" and "mv 'The Shining.pdf' ..")
         </p>
         
-        
+        <div id="mv"></div>
+<!--
         <p>
             Terminal Result of changing directories (displayed after typing correct answer, will automatically "use ls"):
             'I Know Why the Caged Bird Sings.pdf' 'The Hobbit.pdf' 'The Shining.pdf'<br>
@@ -164,6 +303,7 @@
             Terminal Result of moving 'The Shining.pdf', will automatically "use ls":
             'I Know Why the Caged Bird Sings.pdf' 'The Hobbit.pdf'
         </p>
+-->
         
         <p>
             Additional comments:
@@ -180,7 +320,8 @@
         <p>
             Renaming files with the terminal also uses mv, as long as there is no conflict between file names and directories are not confused for files.  Move to the "letters" directory and change the name of 'Recommendation Letter.txt' to 'Final Recommendation Letter.txt' (Hint: mv (current file name) (new file name)).
         </p>
-        
+        <div id="mv2"></div>
+<!--
         
         <p>
             Terminal Result of changing directories (displayed after typing correct answer, will automatically "use ls"):
@@ -189,13 +330,17 @@
             Terminal Result of renaming (displayed after typing correct answer, will automatically "use ls"):
             'Final Recommendation Letter.txt' 'Mother\'s Day.txt'<br>
         </p>
+-->
         
         <h3>chmod</h3>
+
         
         <p>
             Directories and files can have their permissions changed through the Linux terminal.  This is useful for collaborative computing environments where one has to restrict or allow access to certain files.  Move to the directory 'song lyrics' (one above where you are now) and try typing "ls -l" into the terminal, the permissions should appear to the left of each item in the current directory. (Tip: the "-l" next to "ls" is called an option, in this case "long", that alters the output of commands).
         </p>
         
+        <div id="chmod"></div>
+<!--
         <p>
             commands required:
             cd ../'song lyrics' or cd .. \ cd 'song lyrics'
@@ -206,6 +351,7 @@
             drwxr-xr-x dotQuiet dotQuiet (size) (timestamp) rock
             -r-xr-xr-x dotQuiet dotQuiet (size) (timestamp) 'Amazing Grace.txt'
         </p>
+-->
         
         <h3>chmod cont.</h3>
         
@@ -214,7 +360,8 @@
             
             Type chmod 'Amazing Grace.txt' 755 then view the new permissions with ls -l.
         </p>
-        
+        <div id="chmod2"></div>
+<!--
         <p>
             commands required: <br>
             chmod 'Amazing Grace.txt' <br>
@@ -228,6 +375,7 @@
             Additional comments:
             The "w" is now present for owners of 'Amazing Grace.txt', you could change the lyrics using a text editor if you wanted to.
         </p>
+-->
         
         
        <h3>wildcards (*)</h3>
@@ -235,26 +383,30 @@
         <p>
             The Linux terminal can do some powerful things with very few characters.  One good example of this fact are wildcards, operators added to commands that select all files that fulfill certain requirements.  The wildcard we will look at is "*", which when followed or preceded by a string of characters, selects files that end or start with that string.  Change to the "rock" directory and remove all lyric files by "The Beatles".  (Hint: every lyric file you need to remove starts with "The Beatles").
         </p>
-        
+    
+        <div id="wildcard"></div>
+<!--
         <p>
             commands required:
             cd rock<br>
             ls (or ls -l)<br>
             (contents: 'The Beatles - I Am The Walrus.txt' 'The Beatles - Hey Jude.txt' 'The Beatles - Strawberry Fields Forever.txt' 'The Doors - Light My Fire.txt' 'The Doors - The End.txt')<br>
             
-            rm "The Beatles"* 
+            rm 'The Beatles'* 
             
             
             Terminal:
             (display contents once all files are removed)<br>
             'The Doors - Light My Fire.txt' 'The Doors - The End.txt'
         </p>
+-->
         
         </div>
     
       <div id="footer">
           <p>&#x24B8;Copyright 2019 Group dotQuiet</p>
       </div>
+    </div>
     </div>
     
       </body>
