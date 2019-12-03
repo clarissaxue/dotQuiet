@@ -3,10 +3,10 @@
     session_name("dotQuiet"); // session name should be a unique name
     session_start();
   
-    // make sure not logged in before user can access page
-    if ($_SESSION['login']) {
-      header("Location: homepage.php"); // user logged in, redirect to homepage
-    }
+    // // make sure not logged in before user can access page
+    // if ($_SESSION['login']) {
+    //   header("Location: homepage.php"); // user logged in, redirect to homepage
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +32,7 @@
             
                 <div class="form-area">
                     <div class="form-user" id="login-form">
-                        <form action="/action_page.php">
+                        <form action="assets/php/login/register.php" method="POST">
                             <h2>Sign Up</h2>
                 
                             <label for="username"><b>Username</b></label>
@@ -45,7 +45,7 @@
                             <input type="password" placeholder="Enter Password Again" name="pass2" required>
                             
                             <div id="user-buttons">
-                                <button type="login" class="main-button">Create Account</button>
+                                <button type="submit" class="main-button">Create Account</button>
                                 <button type="button" class="other-button" onclick="">Log In</button>
                             </div>
 

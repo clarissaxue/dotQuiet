@@ -22,7 +22,7 @@
             
                 <div class="form-area">
                     <div class="form-user" id="login-form">
-                        <form action="/action_page.php">
+                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                             <h2>Sign Up</h2>
                 
                             <label for="username"><b>Username</b></label>
