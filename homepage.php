@@ -1,52 +1,17 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Learn Linux</title>
-  </head>
-  <body>
-    <div class="header">
-			<div class="logo">
-          <img src="dotQuietlogo.png" width="230"alt="logo" onclick="toHomepage();">
-			</div>
+<?php
+	// for any page you want to use same session in, have to use same name & session start()
+	session_name("dotQuiet"); // session name should be a unique name
+	session_start();
 
-      <ul class="navbar">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Learn</a>
-            <ul>
-              <li><a href="#">Introduction</a></li>
-              <li><a href="#">Lessons</a>
-                <ul>
-                  <li><a href="#">Easy</a></li>
-                  <li><a href="#">Medium</a></li>
-                  <li><a href="#">Hard</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Quizzes</a>
-                <ul>
-                  <li><a href="#">Quiz#1</a></li>
-                  <li><a href="#">Quiz#2</a></li>
-                  <li><a href="#">Quiz#3</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="#">History</a></li>
-          <li><a href="#">Sources</a></li>
-          <button class="logout-button">Logout</button>
-        </ul>
-    </div>
-
-=======
-<?php 
-
+	// make sure logged in before user can access page
+	if (!$_SESSION['login']) {
+		header("Location: index.php"); // user not logged in, redirect to login page
+  } else {
     $path = "./";
     $title = "Homepage";
-
+  
     include $path."assets/php/header.php";
-
+  }
 ?>
 <div id="wrapper">
 <div id="body">
@@ -77,4 +42,3 @@
     include $path."assets/php/footer.php";
 
 ?>
->>>>>>> 13ed92ff282177335ebf608203a25ebdd9aae599
