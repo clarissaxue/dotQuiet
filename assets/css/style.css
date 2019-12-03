@@ -18,6 +18,19 @@ body {
     color:#444;
 }
 
+/* help footer on welcome page stay on bottom of page */
+.bottom {
+    width: 86%;
+    height: 3em;
+    bottom: 1em;
+    text-align: center;
+    position: absolute;
+}
+
+img {
+    cursor: pointer;
+}
+
 a {
     color: #222222;
     border-bottom: 1px solid #fcfcfc;
@@ -26,9 +39,15 @@ a {
 }
 
 a:hover {
-   border-bottom: 2px solid #7b9ebe;
-   color:#888888;
-   transition: all 0.3s ease-out;
+   border-bottom: 4px solid #7b9ebe;
+   transition: all 0.2s ease-out;
+   background-color: #e3e3e3;
+}
+
+h1{
+    color:rgb(226, 204, 146);
+    line-height: 2em;
+    font-size: 3em;
 }
 
 h2{
@@ -53,8 +72,9 @@ h2{
 
 .navbar{
 	float:right;
-	margin-right:250px;
-	margin-top: -70px;
+	width: 510px;
+	margin-right:125px;
+    margin-top: -80px;
 	letter-spacing: 1.2px;
 	font-size:16px;
 	text-transform: uppercase;
@@ -62,41 +82,175 @@ h2{
 	font-weight: 500;
 }
 
+/**************************/
+/*      welcome page      */
+/**************************/
 
-/* Login CSS Form */
-/* Button used to open the contact form*/
-.open-button 
-{
-    color: #7b9ebe;
-    padding: 5px;
-    cursor: pointer;
-    position: absolute;
-    top: 47px;
-    right: 175px;
-    width: 70px;
-    border:1px solid #fcfcfc;
-    background-color:#fcfcfc;
-    font-family:"Trebuchet MS", Calibri, sans-serif;
-    font-size:13px;
-    text-transform: uppercase;
+/* wrapper without site content */
+#welcome-wrapper {
+    margin: 150px 100px 10px 100px;
+    height: 100%;
 }
 
-.register-button 
+#welcome {
+    padding-top: 13em;
+}
+
+#welcome-text {
+    font-size: 1.2em;
+}
+
+.blue-text {
+    color: #7b9ebe;
+}
+
+/* column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* create two unequal columns that sit next to each other */
+/* left, larger column */
+.large {
+    flex: 60%;
+}
+
+/* form area, right column */
+.form-area {
+    flex: 40%;
+}
+
+/**** NEW FORM ****/
+.form-user {
+    font-size: 13px;
+    height: 100%;
+    color: #666;
+    background-color: white;
+    border-radius: 4px;
+}
+
+#login-form {
+    padding: 2em 3em 2em 3em;
+}
+
+.form-container > h2 {
+    color: #7b9ebe;
+}
+
+#user-buttons {
+    padding-top: 1.8em;
+}
+
+.other-button {
+    color: #7b9ebe;
+    padding: 5px;
+    padding-top: 1em;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: white;
+    font-family: "Trebuchet MS", Calibri, sans-serif;
+    font-size: 1.1em;
+    width: 100%;
+    text-align: center;
+    top: 5px;
+}
+
+/* uses .other-button class aside from border radius */
+.logout-button {
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #7b9ebe;
+    background-color: #7b9ebe;
+    font-family: "Trebuchet MS", Calibri, sans-serif;
+    font-size: 1.1em;
+    width: 20%;
+    text-align: center;
+    border-radius: 7px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    margin-top: 11px;
+}
+
+.logout-button:hover {
+    cursor: pointer;
+    background-color:white;
+    color: #7b9ebe;
+    transition: all 0.3s ease-out;
+}
+
+.main-button 
 {
     background-color: #7b9ebe;
     color: white;
-    padding: 4px;
+    margin-left: 10px;
     cursor: pointer;
-    position: absolute;
-    top: 46px;
-    right: 90px;
-    width: 90px;
     border-radius: 7px;
     border: 2px solid#7b9ebe;
     font-family:"Trebuchet MS", Calibri, sans-serif;
-    font-size:13px;
-    text-transform: uppercase;
+    font-size: 1.1em;
+    width: 95%;
+    height: 3em;
 }
+
+.form-user .other-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.form-user .main-button:hover {
+    cursor: pointer;
+    background-color:white;
+    border:2px solid #7b9ebe;
+    color:#7b9ebe;
+    transition: all 0.3s ease-out;
+}
+
+.form-user label>p {
+    float: left;
+    margin-top: 10px;
+    color: #5E5E5E;
+}
+
+.form-user label{
+    display: block;
+    width: 98%;
+    padding: 10px 10px 10px 0;
+    border-radius:4px;
+    margin-left: 10px;
+    font-size: 1.1em;
+    line-height: 1em;
+    margin-top:10px;
+}
+
+.form-user input[type="text"],
+.form-user input[type="password"] {
+    color: #555;
+    height: 4em;
+    width: 95%;
+    font-size: 1.1em;
+    line-height:15px;
+    padding: 0px 0px 0px 10px;
+    margin-top: 2px;
+    border: 1px solid #E5E5E5;
+    background: #e2e2e2;
+    outline: 0;
+    border-radius:4px;
+    margin-left: 10px;
+    -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    font-family: courier;
+}
+
+.indent{
+	position:relative;
+	left:25px;
+}
+
+
+/* NEW FORM END */
+
 
 /* The popup form - hidden by default */
 .form-popup 
@@ -119,60 +273,6 @@ h2{
     max-width: 300px;
     padding: 10px;
     background-color: white;
-}
-
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] 
-{
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-}
-
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus 
-{
-    background-color: #ddd;
-    outline: none;
-}
-
-/* Set a style for the login button */
-.form-container .btn 
-{
-    background-color: #6FB091;
-    border-radius: 7px;
-    border: 2px solid #000000;
-    color: white;
-    padding: 16px 20px;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel 
-{
-    background-color: red;
-    border-radius: 7px;
-    border: 2px solid #000000;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover 
-{
-    opacity: 1;
-}
-/* //Login CSS Form */
-
-
-
-#nav{
-    grid-area: nav;
-    background-color: blue;
-    text-align: center; 
 }
 
 #logo {
@@ -229,184 +329,59 @@ h2{
 }
 
 
-
-
-
-
-
-/* all styles for horizontal navigation */
-.navBorder{
-    border-radius: 10px;
-    border: 2px solid #000000;
-}
-
-#nav {
-    background-color: #BE7B7B;
-    border: 2px solid #000000;
-}
-
-#nav ul {
-    list-style: none;
-    text-align: center;
-}
-
-#nav li {
-    display: inline-block;
-    margin-left: 30px;
-}
-
-#nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    padding: 5px 0px 5px 0px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* hover over top nav items */
-#nav ul li a:hover {
-    background-color: white;
-    color: #7B9EBE;
-    border-radius: 7px;
-}
-
-/* hovering over top nav items makes sub-items appear */
-#nav ul li:hover ul {
-    display: block;
-}
-
-#nav ul li {
-    list-style: none;
-    position: relative;
-    background-color: #7B9EBE;
-    width: 162px;
-    text-align: center;
-}
-
-#nav ul li a {
-    display: block;
-    text-decoration: none;
-}
-
-/* if top items not hovered, hide pages */
-#nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 46px;
-    right: 4px;
-}
-
-#nav ul li ul li{
-    width: 149px;
-    border-bottom: 2px solid #000000;
-    border-right: 2px solid #000000;
-    border-left: 2px solid #000000;
-}
-
-#nav ul li ul li a {
-    padding: 10px 20px;
-    font-size: 22px;
-}
-
-/* sub elemnts of nav (remove border-radius bc conflicting css)*/
-#nav ul li ul li a:hover {
-    border-radius: 0px;
-}
 /* end horizontal nav styling */
 
 
-
-
-
-
-/* all styles for vertical navigation */
-.verticalWrapper {
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 250px;
-  height: 450px;
-}
-
-.vertical {
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 20px;
-}
-
-.vertical > ul {
+/* new horizontal nav which includes vertical nav */
+ul {
     list-style: none;
-    padding: 2px 20px 50px 20px; 
+    padding: 0;
+    margin: 0;
+    background-color: #e3e3e3;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px;
 }
-
-/* direct descendant of vertical/ul/ with form li becomes verticle (block) */
-.vertical ul li {
+  
+ul li {
     display: block;
+    position: relative;
+    float: left;
 }
-
-/* direct descendant of vertical/ul/li/ with form label form a becomes blue*/
-.vertical ul li label {
-    background-color:  #7B9EBE;
-    border-radius: 4px;
-    color: white;
+li ul { 
+    display: none; 
+}
+ul li a {
     display: block;
-    height: 50px;
-    line-height: 50px;
-    margin-top: 50px;
-    border: 2px solid #7B9EBE;
-
-}
-
-/* direct descendatnts of vertical/ul/li with form label:hover become "clickable" */
-.vertical ul li label:hover {
-    cursor: pointer;
-    background-color: rgb(123, 158, 190, 0.1);
-    color: #7B9EBE;
-    transition: all 0.15s ease-out;
-}
-
-/* direct descendants of vertical/ul/li with form input are hidden until hover/clicked */
-.vertical ul li input {
-    display: none;
-}
-
-/* direct descendants of verical/ul/li with form div are sub-elements of list */
-.vertical ul li div {
-    max-height: 0;
-    overflow: hidden;
-
-}
-
-/* direct descendants of vertical/ul/li with form input that are clicked show div with same descendants*/
-.vertical ul li input:checked + div {
-    max-height: 130px;
-    max-width: 175px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* direct descendants of vertical/ul/li/div/ul/li with form a (subNavs) are styled */
-.vertical ul li div ul li a {
-    background-color: white;
-    border-bottom: 2px solid #000000;
-    border-right: 2px solid #000000;
-    border-left: 2px solid #000000;
-    color: white;
-    background-color: #7B9EBE;
-    font-size: 18px;
-    display: block;
-    padding: 10px 0px 10px 0px;
+    padding: 1em;
     text-decoration: none;
+    white-space: nowrap;
+    border-radius: 8px;
+}
+  
+li:hover > ul {
+    display: block;
+    position: absolute;
+    border-radius: 8px;
+}
+  
+li:hover li { 
+    float: none; 
+}
+  
+li:hover li a:hover { 
+    border-radius: 8px;
+}
+  
+li ul li { 
+    border-top: 0; 
 }
 
-/* direct descendants of vertical/ul/li/div/ul/li:hover with form a (subNavs) are styled */
-.vertical ul li div ul li:hover a {
-    background-color: white;
-    color: #7B9EBE;
-    padding: 10px 0 10px 35px;
+ul ul ul {
+    left: 100%;
+    top: 0;
 }
-/* end vertical navigation styling */
+
 
 
 /**QUIZ FORM STYLE**/
