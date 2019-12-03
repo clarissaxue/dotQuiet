@@ -216,6 +216,7 @@ h2{
 .form-user input[type="text"],
 .form-user input[type="password"] {
     color: #555;
+    display: block;
     height: 4em;
     width: 95%;
     font-size: 1.1em;

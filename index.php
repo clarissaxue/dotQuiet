@@ -1,8 +1,4 @@
 <?php
-		// for any page you want to use same session in, have to use same name & session start()
-    session_name("dotQuiet"); // session name should be a unique name
-    session_start();
-  
     // // make sure not logged in before user can access page
     // if ($_SESSION['login']) {
     //   header("Location: homepage.php"); // user logged in, redirect to homepage
@@ -13,6 +9,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/login.js"></script>
     <title>Learn Linux</title>
   </head>
   <body>
@@ -32,21 +29,21 @@
             
                 <div class="form-area">
                     <div class="form-user" id="login-form">
-                        <form action="assets/php/login/register.php" method="POST">
-                            <h2>Sign Up</h2>
+                        <form action="assets/php/login/register.php" method="POST" id="user-form">
+                            <h2 id="form-title">Sign Up</h2>
                 
-                            <label for="username"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="username" required>
+                            <label for="user"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="user" required>
                   
                             <label for="pass"><b>Password</b></label>
                             <input type="password" placeholder="Enter Password" name="pass" required>
 
-                            <label for="pass2"><b>Re-Type Password</b></label>
-                            <input type="password" placeholder="Enter Password Again" name="pass2" required>
+                            <label for="pass2" id="pass2-label"><b>Re-Type Password</b></label>
+                            <input type="password" placeholder="Enter Password Again" name="pass2" id="pass2-in" required>
                             
                             <div id="user-buttons">
                                 <button type="submit" class="main-button">Create Account</button>
-                                <button type="button" class="other-button" onclick="">Log In</button>
+                                <button type="button" class="other-button" onclick="toggleForm();">Log In</button>
                             </div>
 
                         </form>
@@ -60,6 +57,5 @@
         </div>
 </div>
 
-<script src="assets/js/login.js"></script>
 </body>
 </html>
