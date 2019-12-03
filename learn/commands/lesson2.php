@@ -3,7 +3,15 @@
     $path = "../../";
     $title = "Lesson 2";
 
-    include $path."assets/php/header2.php";
+    include $path."assets/php/header.php";
+
+    echo '<script src="<?php $path; ?>assets/js/lesson2.js"></script>';
+    
+    echo '<script src="<?php echo $path; ?>assets/bower_components/jquery/dist/jquery.min.js"></script>';
+    
+    echo '<script src="<?php echo $path; ?>assets/bower_components/jquery.terminal/js/jquery.terminal.min.js"></script>';
+    
+    echo '<link href="<?php echo $path; ?>assets/bower_components/jquery.terminal/css/jquery.terminal.min.css"/>';
 
 ?>
 <div id="wrapper">

@@ -12,7 +12,7 @@
 <body>
   <div class="header2">
         <div class="logo2">
-            <img src="../../dotQuietlogo.png" width="230" alt="logo" onclick="toHomepage();">
+            <img src="<?php echo $path; ?>dotQuietlogo.png" width="230" alt="logo" onclick="toHomepage();">
         </div>
 
         <ul class="navbar2">
@@ -38,7 +38,7 @@
             </li>
             <li><a href="<?php echo $path; ?>history/history.php">History</a></li>
             <li><a href="<?php echo $path; ?>sources/sources.php">Sources</a></li>
-            <button class="logout-button">Logout</button>
+            <li><button class="logout-button">Logout</button></li>
           </ul>
       </div>
               

@@ -7,12 +7,13 @@
   <meta name="author" content="dotQuiet">
   
   <link href="<?php echo $path; ?>assets/css/style.css" rel="stylesheet">
+<script src="<?php echo $path; ?>assets/js/quiz.js"></script>
 </head>
 
 <body>
   <div class="header">
         <div class="logo">
-            <img src="dotQuietlogo.png" width="230" alt="logo" onclick="toHomepage();">
+            <img src="<?php echo $path; ?>dotQuietlogo.png" width="230" alt="logo" onclick="toHomepage();">
         </div>
 
         <ul class="navbar">

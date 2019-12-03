@@ -6,6 +6,7 @@
     include $path."assets/php/header.php";
 
 ?>
+
 <div id="wrapper">
 <div id="body">
         
@@ -28,7 +29,7 @@
     </p>
     
     <ul>
-        Some popular Linux distributions
+        <p>Some popular Linux distributions</p>
         <li><a href="https://ubuntu.com/">Ubuntu</a></li>
         <li><a href="https://www.linuxmint.com/">Linux Mint</a></li>
         <li><a href="https://elementary.io/">Elementary OS</a></li>
