@@ -13,6 +13,7 @@ body {
 	font-size:15px;
 	line-height: 1.5em;
 	margin: -10px;
+    margin-left: 0px;
 	margin-bottom: 20px;
     overflow-x: hidden;
     color:#444;
@@ -27,21 +28,15 @@ body {
     position: absolute;
 }
 
-img {
-    cursor: pointer;
-}
-
-a {
+.navbar,.navbar2 a {
     color: #222222;
     border-bottom: 1px solid #fcfcfc;
-    text-decoration: none;
-    padding:1px 5px 2px 5px;
 }
 
 a:hover {
-   border-bottom: 4px solid #7b9ebe;
-   transition: all 0.2s ease-out;
-   background-color: #e3e3e3;
+   border-bottom: 2px solid #7b9ebe;
+   color:#888888;
+   transition: all 0.3s ease-out;
 }
 
 h1{
@@ -64,7 +59,22 @@ h2{
 	box-shadow:0 4px 10px -4px rgba(0,0,0,.1);
 }
 
+.header2{
+    position: fixed;
+	background: #fcfcfc;
+	width:105%;
+	margin-top: -140px;
+	box-shadow:0 4px 10px -4px rgba(0,0,0,.1);
+    height:8em;
+}
+
 .logo{
+	width:350px;
+	margin-top: -25px;
+	margin-left: 70px;
+}
+
+.logo2{
 	width:350px;
 	margin-top: -25px;
 	margin-left: 70px;
@@ -72,6 +82,18 @@ h2{
 
 .navbar{
 	float:right;
+	width: 510px;
+	margin-right:125px;
+    margin-top: -80px;
+	letter-spacing: 1.2px;
+	font-size:16px;
+	text-transform: uppercase;
+	word-spacing: 20px;
+	font-weight: 500;
+}
+
+.navbar2{
+    float:right;
 	width: 510px;
 	margin-right:125px;
     margin-top: -80px;
@@ -154,30 +176,6 @@ h2{
     width: 100%;
     text-align: center;
     top: 5px;
-}
-
-/* uses .other-button class aside from border radius */
-.logout-button {
-    color: white;
-    padding: 5px;
-    cursor: pointer;
-    border: 1px solid #7b9ebe;
-    background-color: #7b9ebe;
-    font-family: "Trebuchet MS", Calibri, sans-serif;
-    font-size: 1.1em;
-    width: 20%;
-    text-align: center;
-    border-radius: 7px;
-    text-transform: uppercase;
-    margin-left: 10px;
-    margin-top: 11px;
-}
-
-.logout-button:hover {
-    cursor: pointer;
-    background-color:white;
-    color: #7b9ebe;
-    transition: all 0.3s ease-out;
 }
 
 .main-button 
@@ -329,9 +327,6 @@ h2{
 }
 
 
-/* end horizontal nav styling */
-
-
 /* new horizontal nav which includes vertical nav */
 ul {
     list-style: none;
@@ -382,6 +377,28 @@ ul ul ul {
     top: 0;
 }
 
+.logout-button {
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #7b9ebe;
+    background-color: #7b9ebe;
+    font-family: "Trebuchet MS", Calibri, sans-serif;
+    font-size: 1.1em;
+    width: 20%;
+    text-align: center;
+    border-radius: 7px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    margin-top: 11px;
+}
+
+.logout-button:hover {
+    cursor: pointer;
+    color: #7b9ebe;
+    background-color: white;
+    transition: all 0.3s ease-out;
+}
 
 
 /**QUIZ FORM STYLE**/
@@ -420,6 +437,7 @@ ul ul ul {
     box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
     font-family: courier;
 }
+
 
 .form textarea{
     height:60px;
@@ -480,4 +498,121 @@ ul ul ul {
 .form label:hover{
 	background: rgb(226, 204, 146, 0.4);
 	transition: all 0.35s ease-out;
+}
+
+.learn-container{
+	display: grid;
+	grid-template-columns:50% 50%;
+	width:100%;
+	height:450px;
+	color:#999999;
+}
+
+.lesson{
+	background: #fcfcfc;
+	height:450px;
+	padding:15px;
+	border-radius: 5px;
+	box-shadow:1px 4px 10px -4px rgba(0,0,0,.1);
+	margin-right:13px;
+	overflow-y:scroll;
+}
+.command{
+	background: #e2e2e2;
+    font-family: courier;
+	padding:15px;
+	border-radius: 5px;
+	box-shadow:1px 4px 10px -4px rgba(0,0,0,.1);
+}
+
+
+/*Code for the mobile menu*/
+
+/*Does not display by default, given a pointer for hovering*/
+#mobileMenuIcon{
+    cursor:pointer;
+    display:none;
+}
+
+/*Mobile menu functionality*/
+.mobileMenu {
+    font-family: "Raleway", sans-serif;
+    font-size:18px;
+    padding-bottom:30px;
+    line-height: 30px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right:0;
+    background-color: #ffffff;
+    transition: 0.5s;
+    border-top-left-radius: 15px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    overflow:hidden;
+}
+
+/*Collapsable links created through nested lists*/
+.mobileMenu ul{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    list-style-type: none;
+}
+
+.mobileMenu ul ul li a{
+    font-size:16px;
+}
+
+.mobileMenu ul ul ul li a{
+    position:relative;
+    left:20px;
+    font-size:14px;
+}
+
+/*Styling for anchors within mobile menu*/
+.mobileMenu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.mobileMenu a:hover {
+  color:skyblue;
+}
+
+/*Close icon ("x") styling*/
+.mobileMenu .close {
+    position:relative;
+    padding:0;
+    margin:0;
+    border:0;
+    top:8px;
+    left:190px;
+    cursor:pointer;
+}
+
+/*Assists in removing double scrollbar when the mobile menu is extended*/
+#innerMobileMenu{
+    width:100%;
+    height:100%;
+    overflow-y:auto;
+    overflow-x: hidden;
+    padding-right:20px;
+}
+
+@media only screen and (max-width:915px){
+    #mobileMenuIcon{ 
+        display:flex;
+        position:relative;
+        padding:0;
+        margin:0;
+        border:0;
+        margin-right:15px;
+        top:8px;
+    }
 }
